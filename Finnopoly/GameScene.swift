@@ -38,7 +38,8 @@ class GameScene: SKScene {
             for child in mapNode.children {
                 if child.name == "routeMap" {
                     for station in child.children {
-                        print(station.name)
+//                        print(station.name)
+                        print("testingtesting")
                     }
                 }
             }
