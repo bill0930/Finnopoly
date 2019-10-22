@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03B60CF112F912BE725114BC109D1679 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148A48FC71B4A0E4AA7EC6B61FC5EA1C /* Cycle.swift */; };
+		0B7AC0B39808EE2214672A8F7687A0D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		10671CBE9A287B5C435CA3189E974D39 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44816A0C6395715351F5A896D4AE749B /* Sort.swift */; };
+		1C50426E323E93CB2C737FD745516AC1 /* WeightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D847B99837666AAAEC299D3556CFFBD0 /* WeightedEdge.swift */; };
+		290AA72EEFCA836DCB574B18B309DE3C /* Pods-Finnopoly-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0399B1E8BD4D45332DFEDE001C0320B /* Pods-Finnopoly-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A209CE7DA3511A57AD382F638A281B5 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4F13CF9F84458AC722AE5E78084C14 /* Queue.swift */; };
+		2C221D6CC699708645CB3CC088EDF938 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4F86C24BCC26C43A24150E1041DCA /* Search.swift */; };
+		3D52E82E4EFB67A17A6B2B85CC6E56AA /* WeightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B9A03A6AAE7DC0B1AB15C4CFF72052 /* WeightedGraph.swift */; };
+		40D9F19534A9A882CC13AA073407C883 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E283A9C230C322F60911A0EDD31AC238 /* Graph.swift */; };
+		4D58E413CD9F9A14B9DFF99AF835416E /* MST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49E4F09E309B479749A6D735794D43 /* MST.swift */; };
+		5370809478DD1CFBCE1C634D82F769BE /* UnweightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060F1007E70FB8D9DA122FEC80870FC7 /* UnweightedGraph.swift */; };
+		5C0AB326EFB3963C604CD6E6BA9B7B44 /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594A54D75CA1FDEBDF4A512C3532067 /* Constructors.swift */; };
+		716A400C5510021A08267E883CB2ED30 /* SwiftGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C234F27E93001B7DCE21DE83EFBDE95B /* SwiftGraph-dummy.m */; };
+		8FE29FBA995CA3210F2AEEBC4869F0F6 /* Pods-Finnopoly-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 153C86A7AD02AB8132D02E227BBF18EF /* Pods-Finnopoly-dummy.m */; };
+		B3E16EA6BE5F9C67EA7EB07E9C3D7FD9 /* UnweightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9D7AFDCA74A5E236EEB71836CE7C6B /* UnweightedEdge.swift */; };
+		B7B0C899C7FD94799B7F4631A381AF4C /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36828D76C1ED1AE1837D79B8D56388F7 /* Edge.swift */; };
+		C1C3DA8D2EDD3FAE14BF3E9A8FA0F179 /* SwiftGraph-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FAACFA7265EF3EDD586C455E9E6DFD /* SwiftGraph-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCB660E14B6C0B986E3AFAC84B2A9CE1 /* SwiftPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863D838C6E78EBCDB2D4CCB01575CDE /* SwiftPriorityQueue.swift */; };
+		D5D78BFDE508A3EB509A4EF55E6F58A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E0AEA0FE5BE22BAD3B843C1518298454 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518576418D99D0498B1749520E214549 /* Stack.swift */; };
+		E696B66BAA61AE76707688E16B4A08F1 /* UniqueElementsGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D96DF1AA5CE8E6700C4C477B5112FA7 /* UniqueElementsGraph.swift */; };
+		F164137BCD91C310C1257DB4F9DAECA0 /* Union.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3E75F2B98ADEE99A05CA671A6683E /* Union.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A517CE7534892278DF501462883B8C46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01186F2F69EA5CF235A810B317B3C9BE;
+			remoteInfo = SwiftGraph;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		060F1007E70FB8D9DA122FEC80870FC7 /* UnweightedGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnweightedGraph.swift; path = Sources/SwiftGraph/UnweightedGraph.swift; sourceTree = "<group>"; };
+		13E4F86C24BCC26C43A24150E1041DCA /* Search.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Sources/SwiftGraph/Search.swift; sourceTree = "<group>"; };
+		148A48FC71B4A0E4AA7EC6B61FC5EA1C /* Cycle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cycle.swift; path = Sources/SwiftGraph/Cycle.swift; sourceTree = "<group>"; };
+		153C86A7AD02AB8132D02E227BBF18EF /* Pods-Finnopoly-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Finnopoly-dummy.m"; sourceTree = "<group>"; };
+		16B3E75F2B98ADEE99A05CA671A6683E /* Union.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Union.swift; path = Sources/SwiftGraph/Union.swift; sourceTree = "<group>"; };
+		1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGraph.xcconfig; sourceTree = "<group>"; };
+		1B49E4F09E309B479749A6D735794D43 /* MST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MST.swift; path = Sources/SwiftGraph/MST.swift; sourceTree = "<group>"; };
+		26EE54B4A4A7642A572E7C7D4B33AEEC /* Pods-Finnopoly-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Finnopoly-Info.plist"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		36828D76C1ED1AE1837D79B8D56388F7 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Sources/SwiftGraph/Edge.swift; sourceTree = "<group>"; };
+		413C5B64C693DE57DAF12C58C79102C8 /* Pods-Finnopoly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Finnopoly.release.xcconfig"; sourceTree = "<group>"; };
+		44816A0C6395715351F5A896D4AE749B /* Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sort.swift; path = Sources/SwiftGraph/Sort.swift; sourceTree = "<group>"; };
+		464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGraph.framework; path = SwiftGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		518576418D99D0498B1749520E214549 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = Sources/SwiftGraph/Stack.swift; sourceTree = "<group>"; };
+		618190526503F2FDB862E992472504C2 /* Pods-Finnopoly-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Finnopoly-acknowledgements.plist"; sourceTree = "<group>"; };
+		7594A54D75CA1FDEBDF4A512C3532067 /* Constructors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constructors.swift; path = Sources/SwiftGraph/Constructors.swift; sourceTree = "<group>"; };
+		80CE0F2F74D54169E5D7CB62C3B30E7A /* Pods-Finnopoly.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Finnopoly.modulemap"; sourceTree = "<group>"; };
+		8B9D7AFDCA74A5E236EEB71836CE7C6B /* UnweightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnweightedEdge.swift; path = Sources/SwiftGraph/UnweightedEdge.swift; sourceTree = "<group>"; };
+		8D96DF1AA5CE8E6700C4C477B5112FA7 /* UniqueElementsGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniqueElementsGraph.swift; path = Sources/SwiftGraph/UniqueElementsGraph.swift; sourceTree = "<group>"; };
+		948A2E4F8D2E7DC27C0E360E887CDE1D /* SwiftGraph-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftGraph-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B5FF03801FD82264EFC0B899F016EB2C /* Pods-Finnopoly-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Finnopoly-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B74459EE93A826E7FB0320475AC85A06 /* Pods-Finnopoly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Finnopoly.debug.xcconfig"; sourceTree = "<group>"; };
+		B7FAACFA7265EF3EDD586C455E9E6DFD /* SwiftGraph-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-umbrella.h"; sourceTree = "<group>"; };
+		C0399B1E8BD4D45332DFEDE001C0320B /* Pods-Finnopoly-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Finnopoly-umbrella.h"; sourceTree = "<group>"; };
+		C234F27E93001B7DCE21DE83EFBDE95B /* SwiftGraph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGraph-dummy.m"; sourceTree = "<group>"; };
+		C2B9A03A6AAE7DC0B1AB15C4CFF72052 /* WeightedGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeightedGraph.swift; path = Sources/SwiftGraph/WeightedGraph.swift; sourceTree = "<group>"; };
+		CA83253D73AEE02222829964D440F777 /* SwiftGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-prefix.pch"; sourceTree = "<group>"; };
+		D847B99837666AAAEC299D3556CFFBD0 /* WeightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeightedEdge.swift; path = Sources/SwiftGraph/WeightedEdge.swift; sourceTree = "<group>"; };
+		D863D838C6E78EBCDB2D4CCB01575CDE /* SwiftPriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftPriorityQueue.swift; path = Sources/SwiftGraph/SwiftPriorityQueue.swift; sourceTree = "<group>"; };
+		DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Finnopoly.framework; path = "Pods-Finnopoly.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E283A9C230C322F60911A0EDD31AC238 /* Graph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = Sources/SwiftGraph/Graph.swift; sourceTree = "<group>"; };
+		FB4F13CF9F84458AC722AE5E78084C14 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Sources/SwiftGraph/Queue.swift; sourceTree = "<group>"; };
+		FCF46F49D7EA155EC931596B231FF5F9 /* Pods-Finnopoly-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Finnopoly-frameworks.sh"; sourceTree = "<group>"; };
+		FEED6CFD6C8D674DEA5FC9A3193BF372 /* SwiftGraph.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftGraph.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		519CBC3530BC27A92874E39A42579A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B7AC0B39808EE2214672A8F7687A0D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE90A6BD977E77BE106910E291A6920C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D78BFDE508A3EB509A4EF55E6F58A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0193873A8F52A626E93E221230B06ED3 /* SwiftGraph */ = {
+			isa = PBXGroup;
+			children = (
+				7594A54D75CA1FDEBDF4A512C3532067 /* Constructors.swift */,
+				148A48FC71B4A0E4AA7EC6B61FC5EA1C /* Cycle.swift */,
+				36828D76C1ED1AE1837D79B8D56388F7 /* Edge.swift */,
+				E283A9C230C322F60911A0EDD31AC238 /* Graph.swift */,
+				1B49E4F09E309B479749A6D735794D43 /* MST.swift */,
+				FB4F13CF9F84458AC722AE5E78084C14 /* Queue.swift */,
+				13E4F86C24BCC26C43A24150E1041DCA /* Search.swift */,
+				44816A0C6395715351F5A896D4AE749B /* Sort.swift */,
+				518576418D99D0498B1749520E214549 /* Stack.swift */,
+				D863D838C6E78EBCDB2D4CCB01575CDE /* SwiftPriorityQueue.swift */,
+				16B3E75F2B98ADEE99A05CA671A6683E /* Union.swift */,
+				8D96DF1AA5CE8E6700C4C477B5112FA7 /* UniqueElementsGraph.swift */,
+				8B9D7AFDCA74A5E236EEB71836CE7C6B /* UnweightedEdge.swift */,
+				060F1007E70FB8D9DA122FEC80870FC7 /* UnweightedGraph.swift */,
+				D847B99837666AAAEC299D3556CFFBD0 /* WeightedEdge.swift */,
+				C2B9A03A6AAE7DC0B1AB15C4CFF72052 /* WeightedGraph.swift */,
+				73F5FD1A1B61B36F05C79E308DF5347A /* Support Files */,
+			);
+			name = SwiftGraph;
+			path = SwiftGraph;
+			sourceTree = "<group>";
+		};
+		62A5FA618A88323622DAFB6E87CB19E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */,
+				464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73F5FD1A1B61B36F05C79E308DF5347A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEED6CFD6C8D674DEA5FC9A3193BF372 /* SwiftGraph.modulemap */,
+				1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */,
+				C234F27E93001B7DCE21DE83EFBDE95B /* SwiftGraph-dummy.m */,
+				948A2E4F8D2E7DC27C0E360E887CDE1D /* SwiftGraph-Info.plist */,
+				CA83253D73AEE02222829964D440F777 /* SwiftGraph-prefix.pch */,
+				B7FAACFA7265EF3EDD586C455E9E6DFD /* SwiftGraph-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGraph";
+			sourceTree = "<group>";
+		};
+		A102C254C13438280F6D96E6D1763D6F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1879732DC3942B6E1418DFC8CFE7DD6 /* Pods-Finnopoly */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B27880C58880BC41C1DBA74295903CDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0193873A8F52A626E93E221230B06ED3 /* SwiftGraph */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C1879732DC3942B6E1418DFC8CFE7DD6 /* Pods-Finnopoly */ = {
+			isa = PBXGroup;
+			children = (
+				80CE0F2F74D54169E5D7CB62C3B30E7A /* Pods-Finnopoly.modulemap */,
+				B5FF03801FD82264EFC0B899F016EB2C /* Pods-Finnopoly-acknowledgements.markdown */,
+				618190526503F2FDB862E992472504C2 /* Pods-Finnopoly-acknowledgements.plist */,
+				153C86A7AD02AB8132D02E227BBF18EF /* Pods-Finnopoly-dummy.m */,
+				FCF46F49D7EA155EC931596B231FF5F9 /* Pods-Finnopoly-frameworks.sh */,
+				26EE54B4A4A7642A572E7C7D4B33AEEC /* Pods-Finnopoly-Info.plist */,
+				C0399B1E8BD4D45332DFEDE001C0320B /* Pods-Finnopoly-umbrella.h */,
+				B74459EE93A826E7FB0320475AC85A06 /* Pods-Finnopoly.debug.xcconfig */,
+				413C5B64C693DE57DAF12C58C79102C8 /* Pods-Finnopoly.release.xcconfig */,
+			);
+			name = "Pods-Finnopoly";
+			path = "Target Support Files/Pods-Finnopoly";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B27880C58880BC41C1DBA74295903CDA /* Pods */,
+				62A5FA618A88323622DAFB6E87CB19E2 /* Products */,
+				A102C254C13438280F6D96E6D1763D6F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		19F886A1A397FCEA2E7590C39C0ED06B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290AA72EEFCA836DCB574B18B309DE3C /* Pods-Finnopoly-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1FC7D6A7A8D3AAA7B897C52CF0559D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C3DA8D2EDD3FAE14BF3E9A8FA0F179 /* SwiftGraph-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01186F2F69EA5CF235A810B317B3C9BE /* SwiftGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 423978B79827ED77B2503EBA8626058C /* Build configuration list for PBXNativeTarget "SwiftGraph" */;
+			buildPhases = (
+				6B1FC7D6A7A8D3AAA7B897C52CF0559D /* Headers */,
+				0B501EC83959250A07A539CEF224076E /* Sources */,
+				DE90A6BD977E77BE106910E291A6920C /* Frameworks */,
+				024E362DD72EC5359F25F7FD05287961 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGraph;
+			productName = SwiftGraph;
+			productReference = 464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0A8F8C196EFB2F8B89D9EB47DB779A75 /* Pods-Finnopoly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 055E6208E5BE611E65E6236A5B4402A0 /* Build configuration list for PBXNativeTarget "Pods-Finnopoly" */;
+			buildPhases = (
+				19F886A1A397FCEA2E7590C39C0ED06B /* Headers */,
+				6BE2BCF132A67B35B14F34CE2961628D /* Sources */,
+				519CBC3530BC27A92874E39A42579A9A /* Frameworks */,
+				A390368E96A3F25021F6526772AD3190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7950A0DDB1815FCAE204E9B7F55CD765 /* PBXTargetDependency */,
+			);
+			name = "Pods-Finnopoly";
+			productName = "Pods-Finnopoly";
+			productReference = DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 62A5FA618A88323622DAFB6E87CB19E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A8F8C196EFB2F8B89D9EB47DB779A75 /* Pods-Finnopoly */,
+				01186F2F69EA5CF235A810B317B3C9BE /* SwiftGraph */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		024E362DD72EC5359F25F7FD05287961 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A390368E96A3F25021F6526772AD3190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B501EC83959250A07A539CEF224076E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C0AB326EFB3963C604CD6E6BA9B7B44 /* Constructors.swift in Sources */,
+				03B60CF112F912BE725114BC109D1679 /* Cycle.swift in Sources */,
+				B7B0C899C7FD94799B7F4631A381AF4C /* Edge.swift in Sources */,
+				40D9F19534A9A882CC13AA073407C883 /* Graph.swift in Sources */,
+				4D58E413CD9F9A14B9DFF99AF835416E /* MST.swift in Sources */,
+				2A209CE7DA3511A57AD382F638A281B5 /* Queue.swift in Sources */,
+				2C221D6CC699708645CB3CC088EDF938 /* Search.swift in Sources */,
+				10671CBE9A287B5C435CA3189E974D39 /* Sort.swift in Sources */,
+				E0AEA0FE5BE22BAD3B843C1518298454 /* Stack.swift in Sources */,
+				716A400C5510021A08267E883CB2ED30 /* SwiftGraph-dummy.m in Sources */,
+				CCB660E14B6C0B986E3AFAC84B2A9CE1 /* SwiftPriorityQueue.swift in Sources */,
+				F164137BCD91C310C1257DB4F9DAECA0 /* Union.swift in Sources */,
+				E696B66BAA61AE76707688E16B4A08F1 /* UniqueElementsGraph.swift in Sources */,
+				B3E16EA6BE5F9C67EA7EB07E9C3D7FD9 /* UnweightedEdge.swift in Sources */,
+				5370809478DD1CFBCE1C634D82F769BE /* UnweightedGraph.swift in Sources */,
+				1C50426E323E93CB2C737FD745516AC1 /* WeightedEdge.swift in Sources */,
+				3D52E82E4EFB67A17A6B2B85CC6E56AA /* WeightedGraph.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BE2BCF132A67B35B14F34CE2961628D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE29FBA995CA3210F2AEEBC4869F0F6 /* Pods-Finnopoly-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7950A0DDB1815FCAE204E9B7F55CD765 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGraph;
+			target = 01186F2F69EA5CF235A810B317B3C9BE /* SwiftGraph */;
+			targetProxy = A517CE7534892278DF501462883B8C46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		323EBD78842DA19C8AE3968BBA211532 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B74459EE93A826E7FB0320475AC85A06 /* Pods-Finnopoly.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44EF6656188A45604C6CB872DF02CFD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 413C5B64C693DE57DAF12C58C79102C8 /* Pods-Finnopoly.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7FE32D911044AC9E324256FA378D75F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGraph/SwiftGraph-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGraph/SwiftGraph-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftGraph/SwiftGraph.modulemap";
+				PRODUCT_MODULE_NAME = SwiftGraph;
+				PRODUCT_NAME = SwiftGraph;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F12E6C9DC1095BB09006427C3553F331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGraph/SwiftGraph-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGraph/SwiftGraph-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftGraph/SwiftGraph.modulemap";
+				PRODUCT_MODULE_NAME = SwiftGraph;
+				PRODUCT_NAME = SwiftGraph;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		055E6208E5BE611E65E6236A5B4402A0 /* Build configuration list for PBXNativeTarget "Pods-Finnopoly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323EBD78842DA19C8AE3968BBA211532 /* Debug */,
+				44EF6656188A45604C6CB872DF02CFD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		423978B79827ED77B2503EBA8626058C /* Build configuration list for PBXNativeTarget "SwiftGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FE32D911044AC9E324256FA378D75F1 /* Debug */,
+				F12E6C9DC1095BB09006427C3553F331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804E13245C9FBBE6A340C555CA8B2B4C /* Debug */,
+				510B057D2E9F059C50D52DA5D90F3ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
