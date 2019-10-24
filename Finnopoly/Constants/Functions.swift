@@ -21,5 +21,3 @@ public func + (left: CGPoint, right: CGPoint) -> CGPoint {
 public func += (left: inout CGPoint, right: CGPoint) {
         left = left + right
 }
-
-
