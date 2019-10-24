@@ -61,6 +61,8 @@
 		288EA998235F0B050099C6BD = {
 			isa = PBXGroup;
 			children = (
+				288EA9D223618EA60099C6BD /* .gitattributes */,
+				288EA9D423618FB50099C6BD /* .gitignore */,
 				288EA9A3235F0B050099C6BD /* Finnopoly */,
 				288EA9A2235F0B050099C6BD /* Products */,
 				C351AE5D3E43C8DD824CFA2E /* Pods */,
@@ -79,8 +81,6 @@
 		288EA9A3235F0B050099C6BD /* Finnopoly */ = {
 			isa = PBXGroup;
 			children = (
-				288EA9D223618EA60099C6BD /* .gitattributes */,
-				288EA9D423618FB50099C6BD /* .gitignore */,
 				288EA9CF235FA51E0099C6BD /* Extension */,
 				288EA9C8235F85E90099C6BD /* Custom Classes */,
 				288EA9C7235F85C50099C6BD /* Constants */,
