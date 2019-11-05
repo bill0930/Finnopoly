@@ -8,7 +8,8 @@
 
 import SpriteKit
 
-class Station: SKSpriteNode{
- 
+
+class Station: SKNode{
+    
 
 }

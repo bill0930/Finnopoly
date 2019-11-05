@@ -7,9 +7,24 @@
 //
 
 import SpriteKit
+import Foundation
 
 class Player: SKSpriteNode {
+    var walletAmount : Double? = 0
+    var currentStation: String?  //The stationName
+    var holdingProps: [String] = []
     
-    var currentPosition: Station?
+     func getPropsCount() -> Double {
+        return Double(self.holdingProps.count)
+    }
     
+    
+    func printDebug(){
+        print("walletAmount: \(String(describing: walletAmount!))")
+        print("currentStation: \(String(describing: currentStation!))")
+        print("cuurentPosition: \(self.position)")
+        print("holdingProps: \(holdingProps)")
+
+    }
+   
 }
