@@ -21,6 +21,7 @@
 		288EA9D1235FA53A0099C6BD /* SKNode+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EA9D0235FA53A0099C6BD /* SKNode+extension.swift */; };
 		288EA9D323618EA60099C6BD /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 288EA9D223618EA60099C6BD /* .gitattributes */; };
 		288EA9D523618FB50099C6BD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 288EA9D423618FB50099C6BD /* .gitignore */; };
+		28C404E6236FF89A00A36FB0 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C404E5236FF89A00A36FB0 /* Property.swift */; };
 		76678768C9BD16BE3C82860A /* Pods_Finnopoly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DB1C8150FF2D65363B163 /* Pods_Finnopoly.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		288EA9D0235FA53A0099C6BD /* SKNode+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+extension.swift"; sourceTree = "<group>"; };
 		288EA9D223618EA60099C6BD /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		288EA9D423618FB50099C6BD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		28C404E5236FF89A00A36FB0 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		3306CEA516BE3ABC31305C08 /* Pods-Finnopoly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.release.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.release.xcconfig"; sourceTree = "<group>"; };
 		92C6AAD05310C1C2399BBBAE /* Pods-Finnopoly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.debug.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 			children = (
 				288EA9C5235F85B90099C6BD /* Station.swift */,
 				288EA9C9235F88A00099C6BD /* Player.swift */,
+				28C404E5236FF89A00A36FB0 /* Property.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C404E6236FF89A00A36FB0 /* Property.swift in Sources */,
 				288EA9AB235F0B050099C6BD /* GameScene.swift in Sources */,
 				288EA9C6235F85B90099C6BD /* Station.swift in Sources */,
 				288EA9AD235F0B050099C6BD /* GameViewController.swift in Sources */,
