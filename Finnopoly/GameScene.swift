@@ -15,7 +15,7 @@ class GameScene: SKScene {
     var routeGraph: UnweightedGraph<String>!
     var worldNode: SKNode!
     var player: Player?
-    
+    //hihihihihi
     
     override func didMove(to view: SKView) {
         worldNode = self
