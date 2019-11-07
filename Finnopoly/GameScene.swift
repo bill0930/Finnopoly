@@ -146,7 +146,6 @@ class GameScene: SKScene {
             
             rollDiceBtnSprite.addTarget(self, selector: #selector(soundButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
 
-
             rollDiceMask = RollDice(size: rollDiceBtnSprite.size)
             rollDiceMask.position = rollDiceBtnSprite.position
 
