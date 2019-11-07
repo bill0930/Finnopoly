@@ -16,6 +16,10 @@ class GameScene: SKScene {
     var worldNode: SKNode!
     var player: Player?
     
+    var rollDiceBtnSprite : SKAControlSprite!
+    var rollDiceForegroundSprite : RollDice!
+    var rollDiceMask : RollDice!
+    var toRoll = true
     
     override func didMove(to view: SKView) {
         worldNode = self
@@ -43,6 +47,18 @@ class GameScene: SKScene {
                 getPlayer(playerName: "Pepe")?.printDebug()
                 //this function helps transvere all properties
                 tranverseProperties()
+        
+        print("******* Getting Roll Dice Button *******")
+        let cropNode = SKCropNode()
+        cropNode.zPosition = 100
+        cropNode.position = CGPoint(x: 0, y: 0)
+        
+        let maskNode = SKNode()
+        maskNode.zPosition = 100
+        cropNode.maskNode = maskNode
+        
+        setupRollDiceButton(maskNode: maskNode)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -118,6 +134,36 @@ class GameScene: SKScene {
         //        }
         
     }
+    
+        /// this function helps call the RollDice.swift
+        func setupRollDiceButton(maskNode: SKNode)
+        {
+            print("****** Setting *******")
+            rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 100, height: 100))
+            rollDiceBtnSprite.position = CGPoint(x: size.width - rollDiceBtnSprite.size.width / 2, y: rollDiceBtnSprite.size.height / 2)
+            rollDiceBtnSprite.zPosition = 300
+            addChild(rollDiceBtnSprite)
+            
+            rollDiceBtnSprite.addTarget(self, selector: #selector(soundButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
+
+
+            rollDiceMask = RollDice(size: rollDiceBtnSprite.size)
+            rollDiceMask.position = rollDiceBtnSprite.position
+
+            rollDiceForegroundSprite = RollDice(size: rollDiceBtnSprite.size)
+            rollDiceForegroundSprite.position = rollDiceBtnSprite.position
+
+            maskNode.addChild(rollDiceMask)
+            addChild(rollDiceForegroundSprite)
+            print("***** Child added *****")
+        }
+        
+        @objc func soundButtonTouchDown() {
+          if toRoll {
+            rollDiceForegroundSprite.setPressed()
+            rollDiceMask.setPressed()
+          }
+        }
     
 }
 
