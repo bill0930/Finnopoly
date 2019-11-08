@@ -26,31 +26,32 @@ class GameScene: SKScene {
         
         getCityGraph()
         player = getPlayer(playerName: "Pepe")
-//                !!!!!!!you may uncomment the below to see how to manipulate the properties!!!!
-//                 e.g. get the property by stationName with "purple2"
-                let testPropNode = getProperty(stationName: "purple2")! //pass by reference
+        //                !!!!!!!you may uncomment the below to see how to manipulate the properties!!!!
+        //                 e.g. get the property by stationName with "purple2"
+        let testPropNode = getProperty(stationName: "purple2")! //pass by reference
         
-                //print out the properties related to this property
-                testPropNode.printDebug()
+        //print out the properties related to this property
+        testPropNode.printDebug()
         
-                //change this node's properties
-                testPropNode.owner = player!.name!
-                testPropNode.setProperties(maxInvestment: 1000.0, originalPrice: 100.0)
-                //since it is passed by reference, by editing testPropNode, the original node will be changed
-                print("------------after update---------")
-                getProperty(stationName: "purple2")?.printDebug()
+        //change this node's properties
+        testPropNode.owner = player!.name!
+        testPropNode.setProperties(maxInvestment: 1000.0, originalPrice: 100.0)
+        //since it is passed by reference, by editing testPropNode, the original node will be changed
+        print("------------after update---------")
+        getProperty(stationName: "purple2")?.printDebug()
         
-                //move the playerNode into brown1
-                move(node: player!, to: "IC-red0-brown0")
-                player?.walletAmount! += 1000000.0
-                print("------------Updated Player---------")
-                getPlayer(playerName: "Pepe")?.printDebug()
-                //this function helps transvere all properties
-                tranverseProperties()
+        //move the playerNode into brown1
+        move(node: player!, to: "cyan6")
+//        move(node: player!, to: "IC-red0-brown0")
+        player?.walletAmount! += 1000000.0
+        print("------------Updated Player---------")
+        getPlayer(playerName: "Pepe")?.printDebug()
+        //this function helps transvere all properties
+        tranverseProperties()
         
         print("******* Getting Roll Dice Button *******")
         let cropNode = SKCropNode()
-        cropNode.zPosition = 100
+        cropNode.zPosition = 99999999
         cropNode.position = CGPoint(x: 0, y: 0)
         
         let maskNode = SKNode()
@@ -135,34 +136,36 @@ class GameScene: SKScene {
         
     }
     
-        /// this function helps call the RollDice.swift
-        func setupRollDiceButton(maskNode: SKNode)
-        {
-            print("****** Setting *******")
-            rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 100, height: 100))
-            rollDiceBtnSprite.position = CGPoint(x: size.width - rollDiceBtnSprite.size.width / 2, y: rollDiceBtnSprite.size.height / 2)
-            rollDiceBtnSprite.zPosition = 300
-            addChild(rollDiceBtnSprite)
-            
-            rollDiceBtnSprite.addTarget(self, selector: #selector(soundButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
-
-            rollDiceMask = RollDice(size: rollDiceBtnSprite.size)
-            rollDiceMask.position = rollDiceBtnSprite.position
-
-            rollDiceForegroundSprite = RollDice(size: rollDiceBtnSprite.size)
-            rollDiceForegroundSprite.position = rollDiceBtnSprite.position
-
-            maskNode.addChild(rollDiceMask)
-            addChild(rollDiceForegroundSprite)
-            print("***** Child added *****")
-        }
+    /// helps call the RollDice.swift
+    /// parameter: maskeNode
+    func setupRollDiceButton(maskNode: SKNode)
+    {
+        print("****** Setting *******")
+        rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 100, height: 100))
+        rollDiceBtnSprite.position = CGPoint(x: 100, y: 100)    // should be at right bottom corner
+        rollDiceBtnSprite.zPosition = 300
+        worldNode.addChild(rollDiceBtnSprite)
         
-        @objc func soundButtonTouchDown() {
-          if toRoll {
+        // set the action for certain events
+        rollDiceBtnSprite.addTarget(self, selector: #selector(soundButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
+        
+        rollDiceMask = RollDice(size: rollDiceBtnSprite.size)
+        rollDiceMask.position = rollDiceBtnSprite.position
+        
+        rollDiceForegroundSprite = RollDice(size: rollDiceBtnSprite.size)
+        rollDiceForegroundSprite.position = rollDiceBtnSprite.position
+        
+        maskNode.addChild(rollDiceMask)
+        worldNode.addChild(rollDiceForegroundSprite)
+        print("***** Child added *****")
+    }
+    
+    @objc func soundButtonTouchDown() {
+        if toRoll {
             rollDiceForegroundSprite.setPressed()
             rollDiceMask.setPressed()
-          }
         }
+    }
     
 }
 
