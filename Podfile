@@ -8,5 +8,4 @@ target 'Finnopoly' do
   # Pods for Finnopoly
 
 pod 'SwiftGraph'
-
 end
