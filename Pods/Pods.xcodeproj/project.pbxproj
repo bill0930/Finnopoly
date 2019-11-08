@@ -3,88 +3,114 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03B60CF112F912BE725114BC109D1679 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148A48FC71B4A0E4AA7EC6B61FC5EA1C /* Cycle.swift */; };
-		0B7AC0B39808EE2214672A8F7687A0D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		10671CBE9A287B5C435CA3189E974D39 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44816A0C6395715351F5A896D4AE749B /* Sort.swift */; };
-		1C50426E323E93CB2C737FD745516AC1 /* WeightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D847B99837666AAAEC299D3556CFFBD0 /* WeightedEdge.swift */; };
-		290AA72EEFCA836DCB574B18B309DE3C /* Pods-Finnopoly-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0399B1E8BD4D45332DFEDE001C0320B /* Pods-Finnopoly-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A209CE7DA3511A57AD382F638A281B5 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4F13CF9F84458AC722AE5E78084C14 /* Queue.swift */; };
-		2C221D6CC699708645CB3CC088EDF938 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4F86C24BCC26C43A24150E1041DCA /* Search.swift */; };
-		3D52E82E4EFB67A17A6B2B85CC6E56AA /* WeightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B9A03A6AAE7DC0B1AB15C4CFF72052 /* WeightedGraph.swift */; };
-		40D9F19534A9A882CC13AA073407C883 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = E283A9C230C322F60911A0EDD31AC238 /* Graph.swift */; };
-		4D58E413CD9F9A14B9DFF99AF835416E /* MST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49E4F09E309B479749A6D735794D43 /* MST.swift */; };
-		5370809478DD1CFBCE1C634D82F769BE /* UnweightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060F1007E70FB8D9DA122FEC80870FC7 /* UnweightedGraph.swift */; };
-		5C0AB326EFB3963C604CD6E6BA9B7B44 /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594A54D75CA1FDEBDF4A512C3532067 /* Constructors.swift */; };
-		716A400C5510021A08267E883CB2ED30 /* SwiftGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C234F27E93001B7DCE21DE83EFBDE95B /* SwiftGraph-dummy.m */; };
-		8FE29FBA995CA3210F2AEEBC4869F0F6 /* Pods-Finnopoly-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 153C86A7AD02AB8132D02E227BBF18EF /* Pods-Finnopoly-dummy.m */; };
-		B3E16EA6BE5F9C67EA7EB07E9C3D7FD9 /* UnweightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9D7AFDCA74A5E236EEB71836CE7C6B /* UnweightedEdge.swift */; };
-		B7B0C899C7FD94799B7F4631A381AF4C /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36828D76C1ED1AE1837D79B8D56388F7 /* Edge.swift */; };
-		C1C3DA8D2EDD3FAE14BF3E9A8FA0F179 /* SwiftGraph-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FAACFA7265EF3EDD586C455E9E6DFD /* SwiftGraph-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCB660E14B6C0B986E3AFAC84B2A9CE1 /* SwiftPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863D838C6E78EBCDB2D4CCB01575CDE /* SwiftPriorityQueue.swift */; };
-		D5D78BFDE508A3EB509A4EF55E6F58A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		E0AEA0FE5BE22BAD3B843C1518298454 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518576418D99D0498B1749520E214549 /* Stack.swift */; };
-		E696B66BAA61AE76707688E16B4A08F1 /* UniqueElementsGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D96DF1AA5CE8E6700C4C477B5112FA7 /* UniqueElementsGraph.swift */; };
-		F164137BCD91C310C1257DB4F9DAECA0 /* Union.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B3E75F2B98ADEE99A05CA671A6683E /* Union.swift */; };
+		03B60CF112F912BE725114BC109D1679 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76945DBA8C6971C10B0B25F93A79E4E3 /* Cycle.swift */; };
+		10671CBE9A287B5C435CA3189E974D39 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461361553325D5D8259E32F32080781C /* Sort.swift */; };
+		1C50426E323E93CB2C737FD745516AC1 /* WeightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FA48E3F6738680947D01E977BDE5C5 /* WeightedEdge.swift */; };
+		2A209CE7DA3511A57AD382F638A281B5 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B00D14BFA60E4536E33BA942C4E2A1 /* Queue.swift */; };
+		2C221D6CC699708645CB3CC088EDF938 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA21B0351AFB0319156774CD5D2BD2 /* Search.swift */; };
+		2ED2FF62A08D7BB34175B0AE8D08762A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */; };
+		3D52E82E4EFB67A17A6B2B85CC6E56AA /* WeightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA74A4AE21EE3A3A357217608EE1E0D6 /* WeightedGraph.swift */; };
+		40D9F19534A9A882CC13AA073407C883 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BF1A2861758EB1338B30F6F9F632B4 /* Graph.swift */; };
+		4D58E413CD9F9A14B9DFF99AF835416E /* MST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790804CF7946EFE7BD5F7A8E62C8F034 /* MST.swift */; };
+		5370809478DD1CFBCE1C634D82F769BE /* UnweightedGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6025BE90DDFBF00FD3F0777028D46837 /* UnweightedGraph.swift */; };
+		5835FF37B1472BF7BE6953BD8EC539BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		5C0AB326EFB3963C604CD6E6BA9B7B44 /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E0C131AB3C5934A9BC529C613E51EF /* Constructors.swift */; };
+		5F66F15BB26E21C97C16FF9571E69EF7 /* SIAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 817D7AC479C3B077CBE5723A78232BCF /* SIAlertView.bundle */; };
+		70F84E0F3AC50B5F060EE9D8B1DFB1BE /* SIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D5E41C9D334011D9517021409573EF /* SIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		716A400C5510021A08267E883CB2ED30 /* SwiftGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA066758A5FBF2BB4BD5EA2891F5BDD /* SwiftGraph-dummy.m */; };
+		763CAF11AD4D5521E7C2CE50E2EDFFB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		A68470616AA07ADF044A552DD1D92884 /* Pods-Finnopoly-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0399B1E8BD4D45332DFEDE001C0320B /* Pods-Finnopoly-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5608B6FFE7CF23C71F9051ADC26B4A /* SIAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC73A8305088D207F6368296B0A9635 /* SIAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3E16EA6BE5F9C67EA7EB07E9C3D7FD9 /* UnweightedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3379CE883F791BA1112954E3F1D7831E /* UnweightedEdge.swift */; };
+		B7B0C899C7FD94799B7F4631A381AF4C /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0972C3D38F4801FDB5C3D2C623154B /* Edge.swift */; };
+		C1C3DA8D2EDD3FAE14BF3E9A8FA0F179 /* SwiftGraph-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA52B5F41407E8AF4C512B7FF8435F45 /* SwiftGraph-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4680628458DF749597FCE0E29782BAC /* SIAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C92848AE51833C7E4C138FAB69C326 /* SIAlertView-dummy.m */; };
+		C60EEC1F439951A6BE55690180C64B64 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D50310FB0258A8582E29739E5D1D582 /* SIAlertView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CCB660E14B6C0B986E3AFAC84B2A9CE1 /* SwiftPriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7CD1E2141CF102D3FE77DCB61F3B40 /* SwiftPriorityQueue.swift */; };
+		D5D78BFDE508A3EB509A4EF55E6F58A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		E0AEA0FE5BE22BAD3B843C1518298454 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA40594EE7CA0A03537C2212F76C2B5 /* Stack.swift */; };
+		E696B66BAA61AE76707688E16B4A08F1 /* UniqueElementsGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBC5224457140CFE72B58593E8E4F2 /* UniqueElementsGraph.swift */; };
+		F061480414D7E78BD1F3996F624A8414 /* Pods-Finnopoly-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 153C86A7AD02AB8132D02E227BBF18EF /* Pods-Finnopoly-dummy.m */; };
+		F164137BCD91C310C1257DB4F9DAECA0 /* Union.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4588D0AF1A54437171F8F5E9F5B23C96 /* Union.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A517CE7534892278DF501462883B8C46 /* PBXContainerItemProxy */ = {
+		5386306C9D413E34FEC9CFBC08A40719 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 01186F2F69EA5CF235A810B317B3C9BE;
 			remoteInfo = SwiftGraph;
 		};
+		69795C2210BEB409EE0F51F509978C2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58D5E236E4689687DBA88FF555852C0A;
+			remoteInfo = SIAlertView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		060F1007E70FB8D9DA122FEC80870FC7 /* UnweightedGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnweightedGraph.swift; path = Sources/SwiftGraph/UnweightedGraph.swift; sourceTree = "<group>"; };
-		13E4F86C24BCC26C43A24150E1041DCA /* Search.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Sources/SwiftGraph/Search.swift; sourceTree = "<group>"; };
-		148A48FC71B4A0E4AA7EC6B61FC5EA1C /* Cycle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cycle.swift; path = Sources/SwiftGraph/Cycle.swift; sourceTree = "<group>"; };
+		00B8055A3B670F78F279F013E00EF6E0 /* SIAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SIAlertView.modulemap; sourceTree = "<group>"; };
 		153C86A7AD02AB8132D02E227BBF18EF /* Pods-Finnopoly-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Finnopoly-dummy.m"; sourceTree = "<group>"; };
-		16B3E75F2B98ADEE99A05CA671A6683E /* Union.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Union.swift; path = Sources/SwiftGraph/Union.swift; sourceTree = "<group>"; };
-		1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGraph.xcconfig; sourceTree = "<group>"; };
-		1B49E4F09E309B479749A6D735794D43 /* MST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MST.swift; path = Sources/SwiftGraph/MST.swift; sourceTree = "<group>"; };
 		26EE54B4A4A7642A572E7C7D4B33AEEC /* Pods-Finnopoly-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Finnopoly-Info.plist"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		36828D76C1ED1AE1837D79B8D56388F7 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Sources/SwiftGraph/Edge.swift; sourceTree = "<group>"; };
+		3379CE883F791BA1112954E3F1D7831E /* UnweightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnweightedEdge.swift; path = Sources/SwiftGraph/UnweightedEdge.swift; sourceTree = "<group>"; };
+		38BF1A2861758EB1338B30F6F9F632B4 /* Graph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = Sources/SwiftGraph/Graph.swift; sourceTree = "<group>"; };
+		39FA48E3F6738680947D01E977BDE5C5 /* WeightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeightedEdge.swift; path = Sources/SwiftGraph/WeightedEdge.swift; sourceTree = "<group>"; };
 		413C5B64C693DE57DAF12C58C79102C8 /* Pods-Finnopoly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Finnopoly.release.xcconfig"; sourceTree = "<group>"; };
-		44816A0C6395715351F5A896D4AE749B /* Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sort.swift; path = Sources/SwiftGraph/Sort.swift; sourceTree = "<group>"; };
+		4588D0AF1A54437171F8F5E9F5B23C96 /* Union.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Union.swift; path = Sources/SwiftGraph/Union.swift; sourceTree = "<group>"; };
+		461361553325D5D8259E32F32080781C /* Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sort.swift; path = Sources/SwiftGraph/Sort.swift; sourceTree = "<group>"; };
 		464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGraph.framework; path = SwiftGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		518576418D99D0498B1749520E214549 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = Sources/SwiftGraph/Stack.swift; sourceTree = "<group>"; };
+		4FA40594EE7CA0A03537C2212F76C2B5 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = Sources/SwiftGraph/Stack.swift; sourceTree = "<group>"; };
+		5AC73A8305088D207F6368296B0A9635 /* SIAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SIAlertView-umbrella.h"; sourceTree = "<group>"; };
+		5D50310FB0258A8582E29739E5D1D582 /* SIAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SIAlertView.m; path = SIAlertView/SIAlertView.m; sourceTree = "<group>"; };
+		6025BE90DDFBF00FD3F0777028D46837 /* UnweightedGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnweightedGraph.swift; path = Sources/SwiftGraph/UnweightedGraph.swift; sourceTree = "<group>"; };
 		618190526503F2FDB862E992472504C2 /* Pods-Finnopoly-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Finnopoly-acknowledgements.plist"; sourceTree = "<group>"; };
-		7594A54D75CA1FDEBDF4A512C3532067 /* Constructors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constructors.swift; path = Sources/SwiftGraph/Constructors.swift; sourceTree = "<group>"; };
+		62D5E41C9D334011D9517021409573EF /* SIAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SIAlertView.h; path = SIAlertView/SIAlertView.h; sourceTree = "<group>"; };
+		6AA066758A5FBF2BB4BD5EA2891F5BDD /* SwiftGraph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGraph-dummy.m"; sourceTree = "<group>"; };
+		6BECF50023BD18AEC4D06745698C4AE3 /* SIAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SIAlertView-prefix.pch"; sourceTree = "<group>"; };
+		76945DBA8C6971C10B0B25F93A79E4E3 /* Cycle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cycle.swift; path = Sources/SwiftGraph/Cycle.swift; sourceTree = "<group>"; };
+		790804CF7946EFE7BD5F7A8E62C8F034 /* MST.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MST.swift; path = Sources/SwiftGraph/MST.swift; sourceTree = "<group>"; };
+		7BEB5DD35D7ACD14F86575485293337A /* SwiftGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-prefix.pch"; sourceTree = "<group>"; };
 		80CE0F2F74D54169E5D7CB62C3B30E7A /* Pods-Finnopoly.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Finnopoly.modulemap"; sourceTree = "<group>"; };
-		8B9D7AFDCA74A5E236EEB71836CE7C6B /* UnweightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnweightedEdge.swift; path = Sources/SwiftGraph/UnweightedEdge.swift; sourceTree = "<group>"; };
-		8D96DF1AA5CE8E6700C4C477B5112FA7 /* UniqueElementsGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniqueElementsGraph.swift; path = Sources/SwiftGraph/UniqueElementsGraph.swift; sourceTree = "<group>"; };
-		948A2E4F8D2E7DC27C0E360E887CDE1D /* SwiftGraph-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftGraph-Info.plist"; sourceTree = "<group>"; };
+		817D7AC479C3B077CBE5723A78232BCF /* SIAlertView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SIAlertView.bundle; path = SIAlertView/SIAlertView.bundle; sourceTree = "<group>"; };
+		83BB310D3858B7CF3BD3411E49073DDB /* SIAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SIAlertView.framework; path = SIAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		859C8E4B5A7C5878473A8894C01DCDF6 /* SwiftGraph.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftGraph.modulemap; sourceTree = "<group>"; };
+		8E0972C3D38F4801FDB5C3D2C623154B /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Sources/SwiftGraph/Edge.swift; sourceTree = "<group>"; };
+		92C92848AE51833C7E4C138FAB69C326 /* SIAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SIAlertView-dummy.m"; sourceTree = "<group>"; };
+		94B00D14BFA60E4536E33BA942C4E2A1 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Sources/SwiftGraph/Queue.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1298A50F774123B1EBA0D4A94B8409A /* SwiftGraph-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftGraph-Info.plist"; sourceTree = "<group>"; };
+		B3E0C131AB3C5934A9BC529C613E51EF /* Constructors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constructors.swift; path = Sources/SwiftGraph/Constructors.swift; sourceTree = "<group>"; };
 		B5FF03801FD82264EFC0B899F016EB2C /* Pods-Finnopoly-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Finnopoly-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B74459EE93A826E7FB0320475AC85A06 /* Pods-Finnopoly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Finnopoly.debug.xcconfig"; sourceTree = "<group>"; };
-		B7FAACFA7265EF3EDD586C455E9E6DFD /* SwiftGraph-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-umbrella.h"; sourceTree = "<group>"; };
+		BC7CD1E2141CF102D3FE77DCB61F3B40 /* SwiftPriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftPriorityQueue.swift; path = Sources/SwiftGraph/SwiftPriorityQueue.swift; sourceTree = "<group>"; };
 		C0399B1E8BD4D45332DFEDE001C0320B /* Pods-Finnopoly-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Finnopoly-umbrella.h"; sourceTree = "<group>"; };
-		C234F27E93001B7DCE21DE83EFBDE95B /* SwiftGraph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGraph-dummy.m"; sourceTree = "<group>"; };
-		C2B9A03A6AAE7DC0B1AB15C4CFF72052 /* WeightedGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeightedGraph.swift; path = Sources/SwiftGraph/WeightedGraph.swift; sourceTree = "<group>"; };
-		CA83253D73AEE02222829964D440F777 /* SwiftGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-prefix.pch"; sourceTree = "<group>"; };
-		D847B99837666AAAEC299D3556CFFBD0 /* WeightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeightedEdge.swift; path = Sources/SwiftGraph/WeightedEdge.swift; sourceTree = "<group>"; };
-		D863D838C6E78EBCDB2D4CCB01575CDE /* SwiftPriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftPriorityQueue.swift; path = Sources/SwiftGraph/SwiftPriorityQueue.swift; sourceTree = "<group>"; };
+		CADBC5224457140CFE72B58593E8E4F2 /* UniqueElementsGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniqueElementsGraph.swift; path = Sources/SwiftGraph/UniqueElementsGraph.swift; sourceTree = "<group>"; };
+		CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		DA74A4AE21EE3A3A357217608EE1E0D6 /* WeightedGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeightedGraph.swift; path = Sources/SwiftGraph/WeightedGraph.swift; sourceTree = "<group>"; };
+		DBAA21B0351AFB0319156774CD5D2BD2 /* Search.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Search.swift; path = Sources/SwiftGraph/Search.swift; sourceTree = "<group>"; };
 		DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Finnopoly.framework; path = "Pods-Finnopoly.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E283A9C230C322F60911A0EDD31AC238 /* Graph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = Sources/SwiftGraph/Graph.swift; sourceTree = "<group>"; };
-		FB4F13CF9F84458AC722AE5E78084C14 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Sources/SwiftGraph/Queue.swift; sourceTree = "<group>"; };
+		E2C6B09BB733801EAE8DC4D30DC07592 /* SIAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SIAlertView.xcconfig; sourceTree = "<group>"; };
+		E7A5A9743955F0C106014C6612F7381E /* SIAlertView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SIAlertView-Info.plist"; sourceTree = "<group>"; };
+		E9775B5B8D65880E0CB36B4E8E2C5881 /* SwiftGraph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGraph.xcconfig; sourceTree = "<group>"; };
+		EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FA52B5F41407E8AF4C512B7FF8435F45 /* SwiftGraph-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-umbrella.h"; sourceTree = "<group>"; };
 		FCF46F49D7EA155EC931596B231FF5F9 /* Pods-Finnopoly-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Finnopoly-frameworks.sh"; sourceTree = "<group>"; };
-		FEED6CFD6C8D674DEA5FC9A3193BF372 /* SwiftGraph.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftGraph.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		519CBC3530BC27A92874E39A42579A9A /* Frameworks */ = {
+		90CA58B0A708582187F3BE1AB6F9E5B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B7AC0B39808EE2214672A8F7687A0D6 /* Foundation.framework in Frameworks */,
+				5835FF37B1472BF7BE6953BD8EC539BC /* Foundation.framework in Frameworks */,
+				2ED2FF62A08D7BB34175B0AE8D08762A /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,52 +122,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E12F872EEE82FD75FC0890A9C2EBCE37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				763CAF11AD4D5521E7C2CE50E2EDFFB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0193873A8F52A626E93E221230B06ED3 /* SwiftGraph */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7594A54D75CA1FDEBDF4A512C3532067 /* Constructors.swift */,
-				148A48FC71B4A0E4AA7EC6B61FC5EA1C /* Cycle.swift */,
-				36828D76C1ED1AE1837D79B8D56388F7 /* Edge.swift */,
-				E283A9C230C322F60911A0EDD31AC238 /* Graph.swift */,
-				1B49E4F09E309B479749A6D735794D43 /* MST.swift */,
-				FB4F13CF9F84458AC722AE5E78084C14 /* Queue.swift */,
-				13E4F86C24BCC26C43A24150E1041DCA /* Search.swift */,
-				44816A0C6395715351F5A896D4AE749B /* Sort.swift */,
-				518576418D99D0498B1749520E214549 /* Stack.swift */,
-				D863D838C6E78EBCDB2D4CCB01575CDE /* SwiftPriorityQueue.swift */,
-				16B3E75F2B98ADEE99A05CA671A6683E /* Union.swift */,
-				8D96DF1AA5CE8E6700C4C477B5112FA7 /* UniqueElementsGraph.swift */,
-				8B9D7AFDCA74A5E236EEB71836CE7C6B /* UnweightedEdge.swift */,
-				060F1007E70FB8D9DA122FEC80870FC7 /* UnweightedGraph.swift */,
-				D847B99837666AAAEC299D3556CFFBD0 /* WeightedEdge.swift */,
-				C2B9A03A6AAE7DC0B1AB15C4CFF72052 /* WeightedGraph.swift */,
-				73F5FD1A1B61B36F05C79E308DF5347A /* Support Files */,
+				6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1795ACC9C38EDDD860ED9CF4F82F343D /* SIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				62D5E41C9D334011D9517021409573EF /* SIAlertView.h */,
+				5D50310FB0258A8582E29739E5D1D582 /* SIAlertView.m */,
+				90527DBC02D39F8FBD47DB3CD20B4EC4 /* Resources */,
+				505349ED8316311A061B56741777FD76 /* Support Files */,
+			);
+			name = SIAlertView;
+			path = SIAlertView;
+			sourceTree = "<group>";
+		};
+		456DEF867BDAC551FEA1F8914896F484 /* SwiftGraph */ = {
+			isa = PBXGroup;
+			children = (
+				B3E0C131AB3C5934A9BC529C613E51EF /* Constructors.swift */,
+				76945DBA8C6971C10B0B25F93A79E4E3 /* Cycle.swift */,
+				8E0972C3D38F4801FDB5C3D2C623154B /* Edge.swift */,
+				38BF1A2861758EB1338B30F6F9F632B4 /* Graph.swift */,
+				790804CF7946EFE7BD5F7A8E62C8F034 /* MST.swift */,
+				94B00D14BFA60E4536E33BA942C4E2A1 /* Queue.swift */,
+				DBAA21B0351AFB0319156774CD5D2BD2 /* Search.swift */,
+				461361553325D5D8259E32F32080781C /* Sort.swift */,
+				4FA40594EE7CA0A03537C2212F76C2B5 /* Stack.swift */,
+				BC7CD1E2141CF102D3FE77DCB61F3B40 /* SwiftPriorityQueue.swift */,
+				4588D0AF1A54437171F8F5E9F5B23C96 /* Union.swift */,
+				CADBC5224457140CFE72B58593E8E4F2 /* UniqueElementsGraph.swift */,
+				3379CE883F791BA1112954E3F1D7831E /* UnweightedEdge.swift */,
+				6025BE90DDFBF00FD3F0777028D46837 /* UnweightedGraph.swift */,
+				39FA48E3F6738680947D01E977BDE5C5 /* WeightedEdge.swift */,
+				DA74A4AE21EE3A3A357217608EE1E0D6 /* WeightedGraph.swift */,
+				90DAD6946AF7DA9651566B1CB5BB90D9 /* Support Files */,
 			);
 			name = SwiftGraph;
 			path = SwiftGraph;
 			sourceTree = "<group>";
 		};
-		62A5FA618A88323622DAFB6E87CB19E2 /* Products */ = {
+		505349ED8316311A061B56741777FD76 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */,
-				464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */,
+				00B8055A3B670F78F279F013E00EF6E0 /* SIAlertView.modulemap */,
+				E2C6B09BB733801EAE8DC4D30DC07592 /* SIAlertView.xcconfig */,
+				92C92848AE51833C7E4C138FAB69C326 /* SIAlertView-dummy.m */,
+				E7A5A9743955F0C106014C6612F7381E /* SIAlertView-Info.plist */,
+				6BECF50023BD18AEC4D06745698C4AE3 /* SIAlertView-prefix.pch */,
+				5AC73A8305088D207F6368296B0A9635 /* SIAlertView-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/SIAlertView";
 			sourceTree = "<group>";
 		};
-		73F5FD1A1B61B36F05C79E308DF5347A /* Support Files */ = {
+		6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FEED6CFD6C8D674DEA5FC9A3193BF372 /* SwiftGraph.modulemap */,
-				1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */,
-				C234F27E93001B7DCE21DE83EFBDE95B /* SwiftGraph-dummy.m */,
-				948A2E4F8D2E7DC27C0E360E887CDE1D /* SwiftGraph-Info.plist */,
-				CA83253D73AEE02222829964D440F777 /* SwiftGraph-prefix.pch */,
-				B7FAACFA7265EF3EDD586C455E9E6DFD /* SwiftGraph-umbrella.h */,
+				EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */,
+				CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		90527DBC02D39F8FBD47DB3CD20B4EC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				817D7AC479C3B077CBE5723A78232BCF /* SIAlertView.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		90DAD6946AF7DA9651566B1CB5BB90D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				859C8E4B5A7C5878473A8894C01DCDF6 /* SwiftGraph.modulemap */,
+				E9775B5B8D65880E0CB36B4E8E2C5881 /* SwiftGraph.xcconfig */,
+				6AA066758A5FBF2BB4BD5EA2891F5BDD /* SwiftGraph-dummy.m */,
+				A1298A50F774123B1EBA0D4A94B8409A /* SwiftGraph-Info.plist */,
+				7BEB5DD35D7ACD14F86575485293337A /* SwiftGraph-prefix.pch */,
+				FA52B5F41407E8AF4C512B7FF8435F45 /* SwiftGraph-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftGraph";
@@ -155,20 +231,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B27880C58880BC41C1DBA74295903CDA /* Pods */ = {
+		B7DA6DA69F0052B727C86513E3BBBD04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0193873A8F52A626E93E221230B06ED3 /* SwiftGraph */,
+				DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */,
+				83BB310D3858B7CF3BD3411E49073DDB /* SIAlertView.framework */,
+				464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C1879732DC3942B6E1418DFC8CFE7DD6 /* Pods-Finnopoly */ = {
@@ -188,41 +258,51 @@
 			path = "Target Support Files/Pods-Finnopoly";
 			sourceTree = "<group>";
 		};
+		C7CEE658E7F9DC59394D2B14E16C331D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1795ACC9C38EDDD860ED9CF4F82F343D /* SIAlertView */,
+				456DEF867BDAC551FEA1F8914896F484 /* SwiftGraph */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				B27880C58880BC41C1DBA74295903CDA /* Pods */,
-				62A5FA618A88323622DAFB6E87CB19E2 /* Products */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				C7CEE658E7F9DC59394D2B14E16C331D /* Pods */,
+				B7DA6DA69F0052B727C86513E3BBBD04 /* Products */,
 				A102C254C13438280F6D96E6D1763D6F /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		19F886A1A397FCEA2E7590C39C0ED06B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				290AA72EEFCA836DCB574B18B309DE3C /* Pods-Finnopoly-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6B1FC7D6A7A8D3AAA7B897C52CF0559D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C1C3DA8D2EDD3FAE14BF3E9A8FA0F179 /* SwiftGraph-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E179161C856B709B6310A3442BB5858C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5608B6FFE7CF23C71F9051ADC26B4A /* SIAlertView-umbrella.h in Headers */,
+				70F84E0F3AC50B5F060EE9D8B1DFB1BE /* SIAlertView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED2EFD6A9AC50D1DAA7CC846999A52EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68470616AA07ADF044A552DD1D92884 /* Pods-Finnopoly-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,21 +329,40 @@
 		};
 		0A8F8C196EFB2F8B89D9EB47DB779A75 /* Pods-Finnopoly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 055E6208E5BE611E65E6236A5B4402A0 /* Build configuration list for PBXNativeTarget "Pods-Finnopoly" */;
+			buildConfigurationList = 6F6BDFC97CC86A314172EE6BE22B06F8 /* Build configuration list for PBXNativeTarget "Pods-Finnopoly" */;
 			buildPhases = (
-				19F886A1A397FCEA2E7590C39C0ED06B /* Headers */,
-				6BE2BCF132A67B35B14F34CE2961628D /* Sources */,
-				519CBC3530BC27A92874E39A42579A9A /* Frameworks */,
-				A390368E96A3F25021F6526772AD3190 /* Resources */,
+				ED2EFD6A9AC50D1DAA7CC846999A52EA /* Headers */,
+				D92AB59ABDDDAEA1C9B301146216E3BA /* Sources */,
+				E12F872EEE82FD75FC0890A9C2EBCE37 /* Frameworks */,
+				FE50B45824EE750D7D253A85B12CE2A0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7950A0DDB1815FCAE204E9B7F55CD765 /* PBXTargetDependency */,
+				99C3387F02B1B6B8E81136958A008204 /* PBXTargetDependency */,
+				7FD9496B33F814E164667157B9B21591 /* PBXTargetDependency */,
 			);
 			name = "Pods-Finnopoly";
 			productName = "Pods-Finnopoly";
 			productReference = DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		58D5E236E4689687DBA88FF555852C0A /* SIAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A124B2EB62415C95F6110352BC18162 /* Build configuration list for PBXNativeTarget "SIAlertView" */;
+			buildPhases = (
+				E179161C856B709B6310A3442BB5858C /* Headers */,
+				6915BB7AF71A228B2616A2D19A293206 /* Sources */,
+				90CA58B0A708582187F3BE1AB6F9E5B9 /* Frameworks */,
+				A6DD5B5B475DAABC80F8C1FA62E574F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SIAlertView;
+			productName = SIAlertView;
+			productReference = 83BB310D3858B7CF3BD3411E49073DDB /* SIAlertView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -276,19 +375,19 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 62A5FA618A88323622DAFB6E87CB19E2 /* Products */;
+			productRefGroup = B7DA6DA69F0052B727C86513E3BBBD04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0A8F8C196EFB2F8B89D9EB47DB779A75 /* Pods-Finnopoly */,
+				58D5E236E4689687DBA88FF555852C0A /* SIAlertView */,
 				01186F2F69EA5CF235A810B317B3C9BE /* SwiftGraph */,
 			);
 		};
@@ -302,7 +401,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A390368E96A3F25021F6526772AD3190 /* Resources */ = {
+		A6DD5B5B475DAABC80F8C1FA62E574F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F66F15BB26E21C97C16FF9571E69EF7 /* SIAlertView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE50B45824EE750D7D253A85B12CE2A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,27 +443,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BE2BCF132A67B35B14F34CE2961628D /* Sources */ = {
+		6915BB7AF71A228B2616A2D19A293206 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FE29FBA995CA3210F2AEEBC4869F0F6 /* Pods-Finnopoly-dummy.m in Sources */,
+				C4680628458DF749597FCE0E29782BAC /* SIAlertView-dummy.m in Sources */,
+				C60EEC1F439951A6BE55690180C64B64 /* SIAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D92AB59ABDDDAEA1C9B301146216E3BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F061480414D7E78BD1F3996F624A8414 /* Pods-Finnopoly-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7950A0DDB1815FCAE204E9B7F55CD765 /* PBXTargetDependency */ = {
+		7FD9496B33F814E164667157B9B21591 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftGraph;
 			target = 01186F2F69EA5CF235A810B317B3C9BE /* SwiftGraph */;
-			targetProxy = A517CE7534892278DF501462883B8C46 /* PBXContainerItemProxy */;
+			targetProxy = 5386306C9D413E34FEC9CFBC08A40719 /* PBXContainerItemProxy */;
+		};
+		99C3387F02B1B6B8E81136958A008204 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SIAlertView;
+			target = 58D5E236E4689687DBA88FF555852C0A /* SIAlertView */;
+			targetProxy = 69795C2210BEB409EE0F51F509978C2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		323EBD78842DA19C8AE3968BBA211532 /* Debug */ = {
+		1FA85A4B39D074A5884088F7AFC31019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C6B09BB733801EAE8DC4D30DC07592 /* SIAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SIAlertView/SIAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SIAlertView/SIAlertView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SIAlertView/SIAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SIAlertView;
+				PRODUCT_NAME = SIAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23ED21864861ECA401C4DAB1D0F7593E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B74459EE93A826E7FB0320475AC85A06 /* Pods-Finnopoly.debug.xcconfig */;
 			buildSettings = {
@@ -373,7 +530,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,141 +551,7 @@
 			};
 			name = Debug;
 		};
-		44EF6656188A45604C6CB872DF02CFD1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 413C5B64C693DE57DAF12C58C79102C8 /* Pods-Finnopoly.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		7FE32D911044AC9E324256FA378D75F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftGraph/SwiftGraph-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftGraph/SwiftGraph-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftGraph/SwiftGraph.modulemap";
-				PRODUCT_MODULE_NAME = SwiftGraph;
-				PRODUCT_NAME = SwiftGraph;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
+		6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -579,7 +602,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -592,9 +615,179 @@
 			};
 			name = Debug;
 		};
+		7FE32D911044AC9E324256FA378D75F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9775B5B8D65880E0CB36B4E8E2C5881 /* SwiftGraph.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGraph/SwiftGraph-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGraph/SwiftGraph-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftGraph/SwiftGraph.modulemap";
+				PRODUCT_MODULE_NAME = SwiftGraph;
+				PRODUCT_NAME = SwiftGraph;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		802833824B729628D0C1844628A4B6A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 413C5B64C693DE57DAF12C58C79102C8 /* Pods-Finnopoly.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F726A12459409110F950A03CEA47416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C6B09BB733801EAE8DC4D30DC07592 /* SIAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SIAlertView/SIAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SIAlertView/SIAlertView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SIAlertView/SIAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SIAlertView;
+				PRODUCT_NAME = SIAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A27713CB74E99AF202AADC23200A32F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
 		F12E6C9DC1095BB09006427C3553F331 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ADC64065C4D201AF770E11BB06528FB /* SwiftGraph.xcconfig */;
+			baseConfigurationReference = E9775B5B8D65880E0CB36B4E8E2C5881 /* SwiftGraph.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -631,15 +824,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		055E6208E5BE611E65E6236A5B4402A0 /* Build configuration list for PBXNativeTarget "Pods-Finnopoly" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				323EBD78842DA19C8AE3968BBA211532 /* Debug */,
-				44EF6656188A45604C6CB872DF02CFD1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		423978B79827ED77B2503EBA8626058C /* Build configuration list for PBXNativeTarget "SwiftGraph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -652,8 +836,26 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				804E13245C9FBBE6A340C555CA8B2B4C /* Debug */,
-				510B057D2E9F059C50D52DA5D90F3ACF /* Release */,
+				6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */,
+				A27713CB74E99AF202AADC23200A32F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A124B2EB62415C95F6110352BC18162 /* Build configuration list for PBXNativeTarget "SIAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FA85A4B39D074A5884088F7AFC31019 /* Debug */,
+				8F726A12459409110F950A03CEA47416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F6BDFC97CC86A314172EE6BE22B06F8 /* Build configuration list for PBXNativeTarget "Pods-Finnopoly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23ED21864861ECA401C4DAB1D0F7593E /* Debug */,
+				802833824B729628D0C1844628A4B6A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
