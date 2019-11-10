@@ -21,11 +21,11 @@ class Property: SKSpriteNode{
     //  please resize the image 130 X 130 and put it into texture
     //  you may use setter to do the conditional setting
     
-      // override var texture: SKTexture? {
-        //set {
-      //
-      //      }
-      // }
+    // override var texture: SKTexture? {
+    //set {
+    //
+    //      }
+    // }
     
     
     //Varies based on Original Price, Investment 
@@ -48,27 +48,27 @@ class Property: SKSpriteNode{
         var action = SKAction.setTexture(SKTexture(imageNamed: "house_0.png"))
         if owner != ""{
             switch(tollPrice) {
-                case 0...99:
+            case 0...99:
                 level = 1
                 action = SKAction.setTexture(SKTexture(imageNamed: "house_1.png"))
-                break
                 
-                case 100...499:
+                
+            case 100...499:
                 level = 2
                 action = SKAction.setTexture(SKTexture(imageNamed: "house_2.png"))
-                break
                 
-                case 500...1000:
+                
+            case 500...1000:
                 level = 3
                 action = SKAction.setTexture(SKTexture(imageNamed: "house_3.png"))
-                break
                 
-                case 1001...2000:
+                
+            case 1001...2000:
                 level = 4
                 action = SKAction.setTexture(SKTexture(imageNamed: "house_4.png"))
-                break
                 
-                default:
+                
+            default:
                 level = 5
                 action = SKAction.setTexture(SKTexture(imageNamed: "house_5.png"))
             }
@@ -76,7 +76,7 @@ class Property: SKSpriteNode{
         self.level = level
         print("run action")
         self.run(action)
-        print("run action end")
+        self.zPosition = CGFloat(GameConstants.Properties.propertyZposition)
     }
     
     //debug
@@ -88,6 +88,7 @@ class Property: SKSpriteNode{
         print("curInvestment: \(self.curInvestment)")
         print("level: \(self.level)")
         print("tollPrice: \(self.tollPrice)")
+        print(self.texture)
     }
     
 }

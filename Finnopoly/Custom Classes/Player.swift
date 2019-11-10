@@ -11,9 +11,11 @@ import Foundation
 
 class Player: SKSpriteNode {
     var walletAmount : Double? = 0
+    var previousStation: String?
     var currentStation: String?  //The stationName
     var holdingProps: [String] = []
     
+    var remainSteps: Int = 0
      func getPropsCount() -> Double {
         return Double(self.holdingProps.count)
     }
@@ -24,7 +26,6 @@ class Player: SKSpriteNode {
         print("currentStation: \(String(describing: currentStation!))")
         print("cuurentPosition: \(self.position)")
         print("holdingProps: \(holdingProps)")
-
     }
    
 }
