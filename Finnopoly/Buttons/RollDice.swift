@@ -6,166 +6,115 @@
 
 import Foundation
 import SpriteKit
-import Darwin
 
 class RollDice : SKSpriteNode
 {
     private let rollButton = SKSpriteNode(imageNamed: "RollDiceButton")
     private var die1 = SKSpriteNode(imageNamed: "die_6")
     private var die2 = SKSpriteNode(imageNamed: "die_6")
+    var mySteps : Int = 0
     
-    private var toRoll = false
-    
-    init(size: CGSize)
+    init(size: CGSize, frame: CGRect)
     {
-        super.init(texture: nil, color: .clear, size: size)
-        setup()
+        super.init(texture: nil, color: .clear, size: frame.size)
+        print(frame.size)
+        setup(size: frame.size)
     }
     
     required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-        setup()
+        setup(size: frame.size)
     }
     
-    func setup()
+    func setup(size: CGSize)
     {
-        rollButton.zPosition = 0
-        rollButton.setScale(0.5)
-        die1.setScale(0.25)
-        die2.setScale(0.25)
+        rollButton.zPosition = 300
+        rollButton.setScale(1)
+        
+        die1.setScale(0.5)
+        die2.setScale(0.5)
+        die1.position = CGPoint(x: -30, y: 80)
+        die2.position = CGPoint(x: 30, y: 80)
+        die1.zPosition = 1000
+        die2.zPosition = 1000
         
         addChild(rollButton)
         addChild(die1)
         addChild(die2)
     }
     
-    func setPressed() -> Int
+    func setPressed()
     {
-        let action = SKAction.scale(to: 1, duration: 0.1)
+        let action = SKAction.scale(to: 0.5, duration: 0.1)
         rollButton.run(action)
+    }
+    
+    func rollDice() -> Int
+    {
+        let die1_result = Int.random(in: 1...6)
+        let die2_result = Int.random(in: 1...6)
+        mySteps = die1_result + die2_result
         
-        let die1_result = Int(1 + arc4random_uniform(6))
-        let die2_result = Int(1 + arc4random_uniform(6))
-        let mySteps = die1_result + die2_result
+        // debug use
+        print("Die 1: \(die1_result)")
+        print("Die 2: \(die2_result)")
         
+        var diceNum_1 : String = "die_6"
+        var diceNum_2 : String = "die_6"
+
         switch die1_result
         {
-        case 1:
-            die1 = SKSpriteNode(imageNamed: "die_1.png")
-        case 2:
-            die1 = SKSpriteNode(imageNamed: "die_2.png")
-        case 3:
-            die1 = SKSpriteNode(imageNamed: "die_3.png")
-        case 4:
-            die1 = SKSpriteNode(imageNamed: "die_4.png")
-        case 5:
-           die1 = SKSpriteNode(imageNamed: "die_5.png")
-        default:
-            die1 = SKSpriteNode(imageNamed: "die_6.png")
+            case 1:
+                diceNum_1 = "die_1"
+                break
+            case 2:
+                diceNum_1 = "die_2"
+                break
+            case 3:
+                diceNum_1 = "die_3"
+                break
+            case 4:
+                diceNum_1 = "die_4"
+                break
+            case 5:
+                diceNum_1 = "die_5"
+               break
+            default:
+                diceNum_1 = "die_6"
         }
-        
+
         switch die2_result
         {
-        case 1:
-            die1 = SKSpriteNode(imageNamed: "die_1.png")
-        case 2:
-            die1 = SKSpriteNode(imageNamed: "die_2.png")
-        case 3:
-            die1 = SKSpriteNode(imageNamed: "die_3.png")
-        case 4:
-            die1 = SKSpriteNode(imageNamed: "die_4.png")
-        case 5:
-           die1 = SKSpriteNode(imageNamed: "die_5.png")
-        default:
-            die1 = SKSpriteNode(imageNamed: "die_6.png")
+            case 1:
+                diceNum_2 = "die_1"
+                break
+            case 2:
+                diceNum_2 = "die_2"
+                break
+            case 3:
+                diceNum_2 = "die_3"
+                break
+            case 4:
+                diceNum_2 = "die_4"
+                break
+            case 5:
+                diceNum_2 = "die_5"
+               break
+            default:
+                diceNum_2 = "die_6"
         }
-        die1.run(action)
-        die2.run(action)
+        
+        die1.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_1)))
+        die2.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_2)))
+
+        rollButton.run(SKAction.scale(to: 1, duration: 0.15))
         
         return mySteps
     }
     
-//    var mySteps = 0
-//    var gameStatus:String!
-//    var die1:Int!
-//    var die2:Int!
-//
-//    init(playerStatus: String)
-//    {
-//        gameStatus = playerStatus
-//        die1 = Int(1 + arc4random_uniform(6))
-//        die2 = Int(1 + arc4random_uniform(6))
-//        mySteps = die1 + die2
-//    }
-//
-//    func rollDice_1() -> String
-//    {
-//        // arc4random_uniform(6) outcome range: 0-5
-//        // so have to "1 +"
-//        if gameStatus == "Continue"
-//        {
-//            print("Result of the die1 is \(die1!)}")
-//            switch die1
-//            {
-//            case 1:
-//                return "die_1.png"
-//            case 2:
-//                return "die_2.png"
-//            case 3:
-//                return "die_3.png"
-//            case 4:
-//                return "die_4.png"
-//            case 5:
-//                return "die_5.png"
-//            default:
-//                return "die_6.png"
-//            }
-//        }
-//        else
-//        {
-//            return ""
-//        }
-//    }
-//
-//    func rollDice_2() -> String
-//    {
-//        // arc4random_uniform(6) outcome range: 0-5
-//        // so have to "1 +"
-//        if gameStatus == "Continue"
-//        {
-//            print("Result of the die1 is \(die2!)}")
-//            switch die2
-//            {
-//            case 1:
-//                return "die_1.png"
-//            case 2:
-//                return "die_2.png"
-//            case 3:
-//                return "die_3.png"
-//            case 4:
-//                return "die_4.png"
-//            case 5:
-//                return "die_5.png"
-//            default:
-//                return "die_6.png"
-//            }
-//        }
-//        else
-//        {
-//            return ""
-//        }
-//    }
-    
-//    func rollDice() -> (die1: Int, die2:Int)
-//    {
-//        // arc4random_uniform(6) outcome range: 0-5
-//        // so have to "1 +"
-//        let die1 = Int(1 + arc4random_uniform(6))
-//        let die2 = Int(1 + arc4random_uniform(6))
-//
-//        print("Result of the roll is \(die1+die2)")
-//        return(die1, die2)
-//
-//    }
+    func setReleased()
+    {
+        rollButton.run(SKAction.scale(to: 1, duration: 0.15))
+    }
 }
