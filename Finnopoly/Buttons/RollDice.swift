@@ -105,12 +105,40 @@ class RollDice : SKSpriteNode
                 diceNum_2 = "die_6"
         }
         
-        die1.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_1)))
-        die2.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_2)))
+        animation(die1_name: diceNum_1, die2_name: diceNum_2)
+//        die1.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_1)))
+//        die2.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_2)))
 
         rollButton.run(SKAction.scale(to: 1, duration: 0.15))
         
         return mySteps
+    }
+    
+    /// animation of dice rolling
+    func animation(die1_name : String, die2_name : String)
+    {
+        var textureAtlas = SKTextureAtlas()
+        var textureArray_1 = [SKTexture]()
+        var textureArray_2 = [SKTexture]()
+        textureAtlas = SKTextureAtlas(named: "images")
+        
+        for i in 1...textureAtlas.textureNames.count
+        {
+            let name = "die_\(i).png"
+            textureArray_1.append(SKTexture(imageNamed: name))
+        }
+        
+        for i in 1...textureAtlas.textureNames.count
+        {
+            let name = "die_\(i).png"
+            textureArray_2.append(SKTexture(imageNamed: name))
+        }
+        
+        textureArray_1.append(SKTexture(imageNamed: die1_name))
+        textureArray_2.append(SKTexture(imageNamed: die2_name))
+        
+        die1.run(SKAction.repeat(SKAction.animate(with: textureArray_1, timePerFrame: 0.1), count: 1))
+        die2.run(SKAction.repeat(SKAction.animate(with: textureArray_2, timePerFrame: 0.1), count: 1))
     }
     
     func setReleased()
