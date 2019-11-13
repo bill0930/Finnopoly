@@ -24,6 +24,11 @@
 		28C404E6236FF89A00A36FB0 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C404E5236FF89A00A36FB0 /* Property.swift */; };
 		76678768C9BD16BE3C82860A /* Pods_Finnopoly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DB1C8150FF2D65363B163 /* Pods_Finnopoly.framework */; };
 		C4DD88F72378986A0004EF9A /* images.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C4DD88F62378986A0004EF9A /* images.atlas */; };
+		C4DD88F92379269E0004EF9A /* Quit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD88F82379269E0004EF9A /* Quit.swift */; };
+		C4DD88FD237930AB0004EF9A /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD88FC237930AB0004EF9A /* MainMenu.swift */; };
+		C4DD88FF237931010004EF9A /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = C4DD88FE237931010004EF9A /* MainMenu.sks */; };
+		C4DD8901237952050004EF9A /* Sucker.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4DD8900237952050004EF9A /* Sucker.mp3 */; };
+		C4DD8903237956480004EF9A /* GameSceneBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4DD8902237956470004EF9A /* GameSceneBGM.mp3 */; };
 		C4E28622237493D600932B87 /* RollDice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28621237493D600932B87 /* RollDice.swift */; };
 		C4E286242374940700932B87 /* SKControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E286232374940700932B87 /* SKControl.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +55,11 @@
 		3306CEA516BE3ABC31305C08 /* Pods-Finnopoly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.release.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.release.xcconfig"; sourceTree = "<group>"; };
 		92C6AAD05310C1C2399BBBAE /* Pods-Finnopoly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.debug.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.debug.xcconfig"; sourceTree = "<group>"; };
 		C4DD88F62378986A0004EF9A /* images.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = images.atlas; sourceTree = "<group>"; };
+		C4DD88F82379269E0004EF9A /* Quit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quit.swift; sourceTree = "<group>"; };
+		C4DD88FC237930AB0004EF9A /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		C4DD88FE237931010004EF9A /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		C4DD8900237952050004EF9A /* Sucker.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sucker.mp3; sourceTree = "<group>"; };
+		C4DD8902237956470004EF9A /* GameSceneBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameSceneBGM.mp3; sourceTree = "<group>"; };
 		C4E28621237493D600932B87 /* RollDice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollDice.swift; sourceTree = "<group>"; };
 		C4E286232374940700932B87 /* SKControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,9 +107,13 @@
 				288EA9A4235F0B050099C6BD /* AppDelegate.swift */,
 				288EA9AA235F0B050099C6BD /* GameScene.swift */,
 				288EA9C1235F6D300099C6BD /* GameScene.sks */,
+				C4DD88FC237930AB0004EF9A /* MainMenu.swift */,
+				C4DD88FE237931010004EF9A /* MainMenu.sks */,
 				288EA9AC235F0B050099C6BD /* GameViewController.swift */,
 				288EA9AE235F0B050099C6BD /* Main.storyboard */,
 				288EA9B1235F0B070099C6BD /* Assets.xcassets */,
+				C4DD8902237956470004EF9A /* GameSceneBGM.mp3 */,
+				C4DD8900237952050004EF9A /* Sucker.mp3 */,
 				288EA9B3235F0B070099C6BD /* LaunchScreen.storyboard */,
 				288EA9B6235F0B070099C6BD /* Info.plist */,
 			);
@@ -155,6 +169,7 @@
 			children = (
 				C4E286232374940700932B87 /* SKControl.swift */,
 				C4E28621237493D600932B87 /* RollDice.swift */,
+				C4DD88F82379269E0004EF9A /* Quit.swift */,
 			);
 			name = Buttons;
 			path = Finnopoly/Buttons;
@@ -222,9 +237,12 @@
 			files = (
 				288EA9D323618EA60099C6BD /* .gitattributes in Resources */,
 				288EA9C2235F6D300099C6BD /* GameScene.sks in Resources */,
+				C4DD8903237956480004EF9A /* GameSceneBGM.mp3 in Resources */,
 				C4DD88F72378986A0004EF9A /* images.atlas in Resources */,
 				288EA9B0235F0B050099C6BD /* Main.storyboard in Resources */,
+				C4DD8901237952050004EF9A /* Sucker.mp3 in Resources */,
 				288EA9B2235F0B070099C6BD /* Assets.xcassets in Resources */,
+				C4DD88FF237931010004EF9A /* MainMenu.sks in Resources */,
 				288EA9D523618FB50099C6BD /* .gitignore in Resources */,
 				288EA9B5235F0B070099C6BD /* LaunchScreen.storyboard in Resources */,
 			);
@@ -279,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DD88FD237930AB0004EF9A /* MainMenu.swift in Sources */,
 				28C404E6236FF89A00A36FB0 /* Property.swift in Sources */,
 				288EA9AB235F0B050099C6BD /* GameScene.swift in Sources */,
 				288EA9C6235F85B90099C6BD /* Station.swift in Sources */,
@@ -287,6 +306,7 @@
 				288EA9CC235F8E230099C6BD /* GameConstants.swift in Sources */,
 				288EA9D1235FA53A0099C6BD /* SKNode+extension.swift in Sources */,
 				288EA9CA235F88A00099C6BD /* Player.swift in Sources */,
+				C4DD88F92379269E0004EF9A /* Quit.swift in Sources */,
 				288EA9C4235F7A2D0099C6BD /* Functions.swift in Sources */,
 				C4E28622237493D600932B87 /* RollDice.swift in Sources */,
 				C4E286242374940700932B87 /* SKControl.swift in Sources */,
@@ -436,14 +456,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 384X4L96G7;
+				DEVELOPMENT_TEAM = VURUP29275;
 				INFOPLIST_FILE = Finnopoly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.EE4304.Finnopoly22;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EE4304.Finnopoly223;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -458,14 +478,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 384X4L96G7;
+				DEVELOPMENT_TEAM = VURUP29275;
 				INFOPLIST_FILE = Finnopoly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.EE4304.Finnopoly22;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EE4304.Finnopoly223;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -26,8 +26,11 @@ class GameScene: SKScene {
     var rollDiceMask : RollDice!
     var toRoll = true
     var myMoves : Int = 0
+    var pepeCam = SKNode()
     
-    var pepeCam = SKCameraNode()
+    var quitBtnSprite : SKAControlSprite!
+    var quitForegroundSprite : Quit!
+    var quitMask : Quit!
         
     //test player
     var npc: Player?
@@ -164,7 +167,7 @@ class GameScene: SKScene {
         player = getPlayer(playerName: "Pepe")
         
         /********************************************************/
-        // Roll Dice Button Display
+        // Button Display
         let cropNode = SKCropNode()
         cropNode.zPosition = 100
         cropNode.position = CGPoint(x: 0, y: 0)
@@ -173,11 +176,16 @@ class GameScene: SKScene {
         maskNode.zPosition = 100
         cropNode.maskNode = maskNode
         
-        let pepeCam = (player?.childNode(withName: "PepeCamera"))!
+        pepeCam = (player?.childNode(withName: "PepeCamera"))!
         
         setupRollDiceButton(maskNode: maskNode, camera: pepeCam)
+        setupQuitButton(maskNode: maskNode, camera: pepeCam)
         /********************************************************/
-        
+        // Background Music
+        let bgm = SKAudioNode(fileNamed: "GameSceneBGM.mp3")
+        self.addChild(bgm)
+        bgm.run(SKAction.play())
+        /********************************************************/
         //npc = getPlayer(playerName: "derek pao")
         //                !!!!!!!you may uncomment the below to see how to manipulate the properties!!!!
         //                 e.g. get the property by stationName with "purple2"
@@ -194,11 +202,7 @@ class GameScene: SKScene {
         //getProperty(stationName: "purple2")?.printDebug()
         
         //move the playerNode into brown1
-//        move(node: player!, to: "brown1")
-        
-        //test 2
-        move(node: player!, to: "blue9")
-        print("Current Player Position: ", player!.position)
+        move(node: player!, to: "brown1")
         let prop = getProperty(stationName: "brown1")
         
         ////////// Test (Uncomment or comment below code)
@@ -245,10 +249,6 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
         super.update(currentTime)
-        
-        // update camera position in each frame
-        let camera = pepeCam, pepe = player
-        camera.position = pepe!.position
     }
     
     //MARK: -Scene Initialization
@@ -344,6 +344,30 @@ class GameScene: SKScene {
         camera.addChild(rollDiceForegroundSprite)
     }
     
+    func setupQuitButton(maskNode: SKNode, camera: SKNode)
+    {
+        quitBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
+        
+        // let the button be related to the camera view
+        let upLeftView = CGPoint(x: 0, y: view!.frame.height - 300)
+        quitBtnSprite.position = convertPoint(fromView: upLeftView)
+        quitBtnSprite.zPosition = 1000
+        camera.addChild(quitBtnSprite)
+        
+        // set the action for certain events
+        quitBtnSprite.addTarget(self, selector: #selector(quitButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
+        quitBtnSprite.addTarget(self, selector: #selector(quitButtonTouchUpInside), forControlEvents: [.TouchUpInside])
+        
+        quitMask = Quit(size: quitBtnSprite.size, frame: frame)
+        quitMask.position = quitBtnSprite.position
+        
+        quitForegroundSprite = Quit(size: quitBtnSprite.size, frame: frame)
+        quitForegroundSprite.position = quitBtnSprite.position
+        
+        maskNode.addChild(quitMask)
+        camera.addChild(quitForegroundSprite)
+    }
+    
     @objc func rollDiceButtonTouchDown()
     {
         if toRoll
@@ -361,7 +385,22 @@ class GameScene: SKScene {
         print("Dice Result: \(myMoves) \n#################")
         rollDiceMask.setReleased()
       }
+//        toRoll = false
     }
+    
+    @objc func quitButtonTouchDown()
+    {
+        quitForegroundSprite.setPressed()
+        quitMask.setPressed()
+    }
+    
+    @objc func quitButtonTouchUpInside()
+    {
+        quitForegroundSprite.setReleased()
+        quitMask.setReleased()
+        print("Quit Button Pressed \n#####################")
+    }
+    
     
 }
 

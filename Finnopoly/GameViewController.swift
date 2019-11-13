@@ -12,6 +12,7 @@ import SpriteKit
 class GameViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
+        
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = GameScene(fileNamed: "GameScene") {
