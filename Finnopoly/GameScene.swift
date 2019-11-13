@@ -64,6 +64,7 @@ class GameScene: SKScene {
     
     func initPlayer(){
         player = getPlayer(playerName: "Pepe")
+        move(node: player!, to: "brown1")
     }
     
     //prompt a alert if there is two or more paths
@@ -188,11 +189,24 @@ class GameScene: SKScene {
         getCityGraph()
         initProp()
         initPlayer()
+        /********************************************************/
+        // Roll Dice Button Display
+        let cropNode = SKCropNode()
+        cropNode.zPosition = 100
+        cropNode.position = CGPoint(x: 0, y: 0)
+        
+        let maskNode = SKNode()
+        maskNode.zPosition = 100
+        cropNode.maskNode = maskNode
+        
+        let pepeCam = (player?.childNode(withName: "PepeCamera"))!
+        
+        setupRollDiceButton(maskNode: maskNode, camera: pepeCam)
+        /********************************************************/
+        
     }
-    override func didMove(to view: SKView) {
-        print("did move")
-        //move the playerNode into brown1
-        move(node: player!, to: "brown1")
+    func rollDice() -> Int {
+        return 1
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -359,6 +373,49 @@ extension GameScene {
         let mappedArray = stringArray?.map({getStation(stationName: $0)!})
         //        print(mappedArray.debugDescription)
         return mappedArray!
+    }
+    
+    func setupRollDiceButton(maskNode: SKNode, camera: SKNode)
+    {
+        rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
+        
+        // let the button be related to the camera view
+        let bottomLeftView = CGPoint(x: 50, y: view!.frame.height + 300)
+        rollDiceBtnSprite.position = convertPoint(fromView: bottomLeftView)
+        rollDiceBtnSprite.zPosition = 1000
+        camera.addChild(rollDiceBtnSprite)
+        
+        // set the action for certain events
+        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
+        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchUpInside), forControlEvents: [.TouchUpInside])
+        
+        rollDiceMask = RollDice(size: rollDiceBtnSprite.size, frame: frame)
+        rollDiceMask.position = rollDiceBtnSprite.position
+        
+        rollDiceForegroundSprite = RollDice(size: rollDiceBtnSprite.size, frame: frame)
+        rollDiceForegroundSprite.position = rollDiceBtnSprite.position
+        
+        maskNode.addChild(rollDiceMask)
+        camera.addChild(rollDiceForegroundSprite)
+    }
+    
+    @objc func rollDiceButtonTouchDown()
+    {
+        if toRoll
+        {
+            rollDiceForegroundSprite.setPressed()
+            rollDiceMask.setPressed()
+        }
+    }
+    
+    @objc func rollDiceButtonTouchUpInside()
+    {
+      if toRoll
+      {
+        myMoves = rollDiceForegroundSprite.rollDice()
+        print("Dice Result: \(myMoves) \n#################")
+        rollDiceMask.setReleased()
+      }
     }
     
     
