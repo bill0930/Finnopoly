@@ -74,7 +74,6 @@ class Property: SKSpriteNode{
             }
         }
         self.level = level
-        print("run action")
         self.run(action)
         self.zPosition = CGFloat(GameConstants.Properties.propertyZposition)
     }
