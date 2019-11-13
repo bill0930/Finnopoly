@@ -21,6 +21,14 @@ class GameScene: SKScene {
     var worldNode: SKNode!
     var player: Player?
     
+    var rollDiceBtnSprite : SKAControlSprite!
+    var rollDiceForegroundSprite : RollDice!
+    var rollDiceMask : RollDice!
+    var toRoll = true
+    var myMoves : Int = 0
+    
+    var pepeCam = SKCameraNode()
+        
     //test player
     var npc: Player?
     
@@ -172,15 +180,10 @@ class GameScene: SKScene {
         print("**************************** Updated \(receiver.name!) 's wallet: \(receiver.walletAmount!)")
     }
     
-    func rollDice() -> Int{
-        let diceNum = Int.random(in: 1...6)
-        print("diceNum is \(diceNum)")
-        return diceNum
-    }
     
-    
-    override func sceneDidLoad() {
-        print("scene loaded")
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        
         worldNode = self
         getCityGraph()
         initProp()
@@ -204,7 +207,11 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        super.update(currentTime)
         
+        // update camera position in each frame
+        let camera = pepeCam, pepe = player
+        camera.position = pepe!.position
     }
     
     //MARK: -Scene Initialization
