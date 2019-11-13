@@ -270,7 +270,7 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        diceNum = rollDice()
+        diceNum = 1
         player?.remainSteps = diceNum!
         serialQueue.sync {
             self.updatePlayerPosition(player: self.player!)
@@ -529,49 +529,6 @@ extension GameScene {
         let mappedArray = stringArray?.map({getStation(stationName: $0)!})
         //        print(mappedArray.debugDescription)
         return mappedArray!
-    }
-    
-    func setupRollDiceButton(maskNode: SKNode, camera: SKNode)
-    {
-        rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
-        
-        // let the button be related to the camera view
-        let bottomLeftView = CGPoint(x: 50, y: view!.frame.height + 300)
-        rollDiceBtnSprite.position = convertPoint(fromView: bottomLeftView)
-        rollDiceBtnSprite.zPosition = 1000
-        camera.addChild(rollDiceBtnSprite)
-        
-        // set the action for certain events
-        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
-        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchUpInside), forControlEvents: [.TouchUpInside])
-        
-        rollDiceMask = RollDice(size: rollDiceBtnSprite.size, frame: frame)
-        rollDiceMask.position = rollDiceBtnSprite.position
-        
-        rollDiceForegroundSprite = RollDice(size: rollDiceBtnSprite.size, frame: frame)
-        rollDiceForegroundSprite.position = rollDiceBtnSprite.position
-        
-        maskNode.addChild(rollDiceMask)
-        camera.addChild(rollDiceForegroundSprite)
-    }
-    
-    @objc func rollDiceButtonTouchDown()
-    {
-        if toRoll
-        {
-            rollDiceForegroundSprite.setPressed()
-            rollDiceMask.setPressed()
-        }
-    }
-    
-    @objc func rollDiceButtonTouchUpInside()
-    {
-      if toRoll
-      {
-        myMoves = rollDiceForegroundSprite.rollDice()
-        print("Dice Result: \(myMoves) \n#################")
-        rollDiceMask.setReleased()
-      }
     }
     
     
