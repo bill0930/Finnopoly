@@ -106,15 +106,15 @@ class RollDice : SKSpriteNode
         }
         
         animation(die1_name: diceNum_1, die2_name: diceNum_2)
-//        die1.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_1)))
-//        die2.run(SKAction.setTexture(SKTexture(imageNamed: diceNum_2)))
-
         rollButton.run(SKAction.scale(to: 1, duration: 0.15))
         
         return mySteps
     }
     
     /// animation of dice rolling
+    /// - Parameters:
+    ///     - die1_name: image name of resultant dice num
+    ///     - die2_name: image name of resultant dice num
     func animation(die1_name : String, die2_name : String)
     {
         var textureAtlas = SKTextureAtlas()
