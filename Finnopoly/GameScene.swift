@@ -15,7 +15,7 @@ class GameScene: SKScene {
     var viewController: UIViewController!
     let serialQueue: DispatchQueue = DispatchQueue(label: "serialQueue")
     
-    var diceNum: Int?
+    //    var diceNum: Int?
     var stationVertices : [String] = []
     var routeGraph: UnweightedGraph<String>!
     var worldNode: SKNode!
@@ -31,7 +31,7 @@ class GameScene: SKScene {
     var quitBtnSprite : SKAControlSprite!
     var quitForegroundSprite : Quit!
     var quitMask : Quit!
-        
+    
     //test player
     var npc: Player?
     
@@ -68,6 +68,31 @@ class GameScene: SKScene {
     func initPlayer(){
         player = getPlayer(playerName: "Pepe")
         move(node: player!, to: "brown1")
+    }
+    
+    func initButton(){
+        /********************************************************/
+        // Button Display
+        let cropNode = SKCropNode()
+        cropNode.zPosition = 100
+        cropNode.position = CGPoint(x: 0, y: 0)
+        
+        let maskNode = SKNode()
+        maskNode.zPosition = 100
+        cropNode.maskNode = maskNode
+        
+        pepeCam = (player?.childNode(withName: "PepeCamera"))!
+        
+        setupRollDiceButton(maskNode: maskNode, camera: pepeCam)
+        setupQuitButton(maskNode: maskNode, camera: pepeCam)
+        /********************************************************/
+    }
+    
+    func initBgm (){
+        // Background Music
+        let bgm = SKAudioNode(fileNamed: "GameSceneBGM.mp3")
+        self.addChild(bgm)
+        bgm.run(SKAction.play())
     }
     
     //prompt a alert if there is two or more paths
@@ -192,25 +217,10 @@ class GameScene: SKScene {
         getCityGraph()
         initProp()
         initPlayer()
-        /********************************************************/
-        // Button Display
-        let cropNode = SKCropNode()
-        cropNode.zPosition = 100
-        cropNode.position = CGPoint(x: 0, y: 0)
+        initButton()
+        initBgm()
         
-        let maskNode = SKNode()
-        maskNode.zPosition = 100
-        cropNode.maskNode = maskNode
         
-        pepeCam = (player?.childNode(withName: "PepeCamera"))!
-        
-        setupRollDiceButton(maskNode: maskNode, camera: pepeCam)
-        setupQuitButton(maskNode: maskNode, camera: pepeCam)
-        /********************************************************/
-        // Background Music
-        let bgm = SKAudioNode(fileNamed: "GameSceneBGM.mp3")
-        self.addChild(bgm)
-        bgm.run(SKAction.play())
         /********************************************************/
         //npc = getPlayer(playerName: "derek pao")
         //                !!!!!!!you may uncomment the below to see how to manipulate the properties!!!!
@@ -245,13 +255,13 @@ class GameScene: SKScene {
         if prop?.owner == "" {
             alertBuy(prop: prop!, playerBuy: player!)
         }
-        
+            
         else if prop?.owner == player?.name! {
             // Below alert supposed to be alert with textfield or picker. But no time to examine how to do it currently
             // therefore just use multiple choice for testing investment first
             alertInvest(prop: prop!, playerInvest: player!)
         }
-        
+            
         else if prop?.owner != player?.name! {
             // How to generate a new player?
             // Change below second player to another one. dont know how to make new player
@@ -263,18 +273,15 @@ class GameScene: SKScene {
         //getPlayer(playerName: "Pepe")?.printDebug()
         //this function helps transvere all properties
         tranverseProperties()
-
-
+        
+        
         
         
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        diceNum = 1
-        player?.remainSteps = diceNum!
-        serialQueue.sync {
-            self.updatePlayerPosition(player: self.player!)
-        }
+        //        diceNum = 1
+        
     }
     
     
@@ -350,90 +357,6 @@ class GameScene: SKScene {
         //        }
         
     }
-    
-    /// set up the roll dice button and add its related actions (i.e, touchUpInside, touchDown)
-    /// - parameter maskNode: SKNode
-    func setupRollDiceButton(maskNode: SKNode, camera: SKNode)
-    {
-        rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
-        
-        // let the button be related to the camera view
-        let bottomLeftView = CGPoint(x: 50, y: view!.frame.height + 300)
-        rollDiceBtnSprite.position = convertPoint(fromView: bottomLeftView)
-        rollDiceBtnSprite.zPosition = 1000
-        camera.addChild(rollDiceBtnSprite)
-        
-        // set the action for certain events
-        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
-        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchUpInside), forControlEvents: [.TouchUpInside])
-        
-        rollDiceMask = RollDice(size: rollDiceBtnSprite.size, frame: frame)
-        rollDiceMask.position = rollDiceBtnSprite.position
-        
-        rollDiceForegroundSprite = RollDice(size: rollDiceBtnSprite.size, frame: frame)
-        rollDiceForegroundSprite.position = rollDiceBtnSprite.position
-        
-        maskNode.addChild(rollDiceMask)
-        camera.addChild(rollDiceForegroundSprite)
-    }
-    
-    func setupQuitButton(maskNode: SKNode, camera: SKNode)
-    {
-        quitBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
-        
-        // let the button be related to the camera view
-        let upLeftView = CGPoint(x: 0, y: view!.frame.height - 300)
-        quitBtnSprite.position = convertPoint(fromView: upLeftView)
-        quitBtnSprite.zPosition = 1000
-        camera.addChild(quitBtnSprite)
-        
-        // set the action for certain events
-        quitBtnSprite.addTarget(self, selector: #selector(quitButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
-        quitBtnSprite.addTarget(self, selector: #selector(quitButtonTouchUpInside), forControlEvents: [.TouchUpInside])
-        
-        quitMask = Quit(size: quitBtnSprite.size, frame: frame)
-        quitMask.position = quitBtnSprite.position
-        
-        quitForegroundSprite = Quit(size: quitBtnSprite.size, frame: frame)
-        quitForegroundSprite.position = quitBtnSprite.position
-        
-        maskNode.addChild(quitMask)
-        camera.addChild(quitForegroundSprite)
-    }
-    
-    @objc func rollDiceButtonTouchDown()
-    {
-        if toRoll
-        {
-            rollDiceForegroundSprite.setPressed()
-            rollDiceMask.setPressed()
-        }
-    }
-    
-    @objc func rollDiceButtonTouchUpInside()
-    {
-      if toRoll
-      {
-        myMoves = rollDiceForegroundSprite.rollDice()
-        print("Dice Result: \(myMoves) \n#################")
-        rollDiceMask.setReleased()
-      }
-//        toRoll = false
-    }
-    
-    @objc func quitButtonTouchDown()
-    {
-        quitForegroundSprite.setPressed()
-        quitMask.setPressed()
-    }
-    
-    @objc func quitButtonTouchUpInside()
-    {
-        quitForegroundSprite.setReleased()
-        quitMask.setReleased()
-        print("Quit Button Pressed \n#####################")
-    }
-    
     
 }
 
@@ -531,6 +454,97 @@ extension GameScene {
         return mappedArray!
     }
     
+    //MARK: - Some Setter for buttons
+    /***************************************************************/
+    /// set up the roll dice button and add its related actions (i.e, touchUpInside, touchDown)
+    /// - parameter maskNode: SKNode
+    func setupRollDiceButton(maskNode: SKNode, camera: SKNode)
+    {
+        rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
+        
+        // let the button be related to the camera view
+        let bottomLeftView = CGPoint(x: 50, y: view!.frame.height + 300)
+        rollDiceBtnSprite.position = convertPoint(fromView: bottomLeftView)
+        rollDiceBtnSprite.zPosition = 1000
+        camera.addChild(rollDiceBtnSprite)
+        
+        // set the action for certain events
+        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
+        rollDiceBtnSprite.addTarget(self, selector: #selector(rollDiceButtonTouchUpInside), forControlEvents: [.TouchUpInside])
+        
+        rollDiceMask = RollDice(size: rollDiceBtnSprite.size, frame: frame)
+        rollDiceMask.position = rollDiceBtnSprite.position
+        
+        rollDiceForegroundSprite = RollDice(size: rollDiceBtnSprite.size, frame: frame)
+        rollDiceForegroundSprite.position = rollDiceBtnSprite.position
+        
+        maskNode.addChild(rollDiceMask)
+        camera.addChild(rollDiceForegroundSprite)
+    }
+    
+    func setupQuitButton(maskNode: SKNode, camera: SKNode)
+    {
+        quitBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
+        
+        // let the button be related to the camera view
+        let upLeftView = CGPoint(x: 0, y: view!.frame.height - 300)
+        quitBtnSprite.position = convertPoint(fromView: upLeftView)
+        quitBtnSprite.zPosition = 1000
+        camera.addChild(quitBtnSprite)
+        
+        // set the action for certain events
+        quitBtnSprite.addTarget(self, selector: #selector(quitButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
+        quitBtnSprite.addTarget(self, selector: #selector(quitButtonTouchUpInside), forControlEvents: [.TouchUpInside])
+        
+        quitMask = Quit(size: quitBtnSprite.size, frame: frame)
+        quitMask.position = quitBtnSprite.position
+        
+        quitForegroundSprite = Quit(size: quitBtnSprite.size, frame: frame)
+        quitForegroundSprite.position = quitBtnSprite.position
+        
+        maskNode.addChild(quitMask)
+        camera.addChild(quitForegroundSprite)
+    }
+    
+    @objc func rollDiceButtonTouchDown()
+    {
+        if toRoll
+        {
+            rollDiceForegroundSprite.setPressed()
+            rollDiceMask.setPressed()
+        }
+    }
+    
+    @objc func rollDiceButtonTouchUpInside()
+    {
+        if toRoll
+        {
+            myMoves = rollDiceForegroundSprite.rollDice()
+            print("Dice Result: \(myMoves) \n#################")
+            player?.remainSteps = myMoves
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.serialQueue.sync {
+                    self.updatePlayerPosition(player: self.player!)
+                }
+            }
+            
+            rollDiceMask.setReleased()
+        }
+        //        toRoll = false
+    }
+    
+    @objc func quitButtonTouchDown()
+    {
+        quitForegroundSprite.setPressed()
+        quitMask.setPressed()
+    }
+    
+    @objc func quitButtonTouchUpInside()
+    {
+        quitForegroundSprite.setReleased()
+        quitMask.setReleased()
+        print("Quit Button Pressed \n#####################")
+    }
     
 }
 
