@@ -30,12 +30,12 @@ class RollDice : SKSpriteNode
     func setup(size: CGSize)
     {
         rollButton.zPosition = 300
-        rollButton.setScale(1)
+        rollButton.setScale(0.8)
         
         die1.setScale(0.5)
         die2.setScale(0.5)
-        die1.position = CGPoint(x: -30, y: 80)
-        die2.position = CGPoint(x: 30, y: 80)
+        die1.position = CGPoint(x: -20, y: 70)
+        die2.position = CGPoint(x: 30, y: 70)
         die1.zPosition = 1000
         die2.zPosition = 1000
         
@@ -106,7 +106,7 @@ class RollDice : SKSpriteNode
         }
         
         animation(die1_name: diceNum_1, die2_name: diceNum_2)
-        rollButton.run(SKAction.scale(to: 1, duration: 0.15))
+        rollButton.run(SKAction.scale(to: 0.8, duration: 0.15))
         
         return mySteps
     }
@@ -143,6 +143,6 @@ class RollDice : SKSpriteNode
     
     func setReleased()
     {
-        rollButton.run(SKAction.scale(to: 1, duration: 0.15))
+        rollButton.run(SKAction.scale(to: 0.8, duration: 0.15))
     }
 }
