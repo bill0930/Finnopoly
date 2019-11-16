@@ -10,8 +10,86 @@ import SpriteKit
 import SwiftGraph
 
 
-class GameScene: SKScene {
+class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
+    //MARK: -PickerView for investment
+     /***************************************************************/
+    let pickerView = UIPickerView(frame: CGRect(x: 0, y: -130, width: 250, height: 300))
+    let days: [String] = ["0", "1", "2", "3","4","5","6","7","8","9"]
     
+    var row1:Int = 0
+    var row2:Int = 0
+    var row3:Int = 0
+    var row4:Int = 0
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 4
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return days.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("Check")
+        if component == 0{
+            row1 = row
+        }else if component == 1{row2 = row}
+        else if component == 2{row3 = row}
+        else if component == 3{row4 = row}
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+      titleForRow row: Int, forComponent component: Int)
+      -> String? {
+        return days[row]
+    }
+    
+    private func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) -> String{
+           if component == 0 {
+               row1 = row
+               return days[row]
+           }
+           if component == 1 {
+               row2 = row
+               return days[row]
+           }
+           if component == 2 {
+               row3 = row
+                      return days[row]
+                  }
+           if component == 3 {
+               row4 = row
+                      return days[row]
+           }else{
+               return ""
+           }
+       }
+    
+    func test(prop: Property, playerInvest: Player){
+        var a: String = ""
+        var b: String = ""
+        var c: String = ""
+        var d: String = ""
+        var result: Int = 0
+        var a1: Int
+        var b1: Int
+        var c1: Int
+        var d1: Int
+        a = pickerView(pickerView, didSelectRow: row1, inComponent: 0)
+        a1 = Int(a)!
+        b = pickerView(pickerView, didSelectRow: row2, inComponent: 1)
+        b1 = Int(b)!
+        c = pickerView(pickerView, didSelectRow: row3, inComponent: 2)
+        c1 = Int(c)!
+        d = pickerView(pickerView, didSelectRow: row4, inComponent: 3)
+        d1 = Int(d)!
+        result = a1 * 1000 + b1 * 100 + c1 * 10 + d1
+        self.propInvest(prop: prop, player: playerInvest, amount: Double(result))
+        print(result)
+    }
+    
+    //MARK: - global variable declaration
+     /***************************************************************/
     var viewController: UIViewController!
     let serialQueue: DispatchQueue = DispatchQueue(label: "serialQueue")
     
@@ -67,6 +145,7 @@ class GameScene: SKScene {
     
     func initPlayer(){
         player = getPlayer(playerName: "Pepe")
+        player?.walletAmount = 1000000
         move(node: player!, to: "brown1")
     }
     
@@ -145,46 +224,47 @@ class GameScene: SKScene {
     func alertInvest(prop: Property, playerInvest: Player) {
         
         // *** Data Validation: Max Investment not yet handle
+        let vc = UIViewController()
         
-        
-        let alertController = UIAlertController(title: "\(prop.name!) meet!" ,message: "Do you want to invest \(prop.name!) ?", preferredStyle: .alert)
-        
-        // $20000 Option
-        alertController.addAction(UIAlertAction(title: "$20000", style: .default, handler: {
-            (action: UIAlertAction!) in
-            self.propInvest(prop: prop, player: playerInvest, amount: 20000.0)
-            
-        }))
-        
-        // $10000
-        alertController.addAction(UIAlertAction(title: "$10000", style: .default, handler: {
-            (action: UIAlertAction!) in
-            self.propInvest(prop: prop, player: playerInvest, amount: 10000.0)
-            
-        }))
-        
-        // $1000
-        alertController.addAction(UIAlertAction(title: "$1000", style: .default, handler: {
-            (action: UIAlertAction!) in
-            self.propInvest(prop: prop, player: playerInvest, amount: 1000.0)
-            
-        }))
-        // $0 Option
-        alertController.addAction(UIAlertAction(title: "$0", style: .default, handler: {
-            (action: UIAlertAction!) in
-            print("No Invest Property \(prop.name!)")
-        }))
-        self.viewController.present(alertController, animated: true, completion: nil)
+        vc.preferredContentSize = CGSize(width: 250,height: 100)
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        vc.view.addSubview(pickerView)
+        let editRadiusAlert = UIAlertController(title: "\(prop.name!) meet!" ,message: "Do you want to invest \(prop.name!) ? \n Your maximum investment is \(prop.maxInvestment)", preferredStyle: UIAlertController.Style.alert)
+        editRadiusAlert.setValue(vc, forKey: "contentViewController")
+        editRadiusAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(action: UIAlertAction!) in self.test(prop: prop, playerInvest: playerInvest)}))
+        editRadiusAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.viewController.present(editRadiusAlert, animated: true)
     }
     
     func propInvest(prop: Property, player: Player, amount: Double) {
+       // print(player.walletAmount!)
+      //  player.walletAmount = 1000
+        if prop.maxInvestment >= amount && player.walletAmount! >= amount{
+      //  print("done")
         prop.curInvestment += amount
         player.walletAmount! -= amount
         prop.setPropLevel() // change display image from house_a to house_b based on investment
         print("*** System: Invest Complete *** \(player.name!) invests \(prop.name!)")
         print("**************************** Updated \(player.name!) 's wallet: \(player.walletAmount!)")
-        
-        prop.printDebug()
+            prop.printDebug()
+        }else if prop.maxInvestment < amount {
+        //    print("Maxin")
+            let alertmax = UIAlertController(title: "Over Max Investment", message: nil, preferredStyle: .alert)
+            alertmax.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                (action: UIAlertAction!) in
+                self.alertInvest(prop: prop, playerInvest: player)
+            }))
+                    self.viewController.present(alertmax, animated: true)
+        }else if player.walletAmount! < amount{
+        //    print("nomoney")
+            let alertmon = UIAlertController(title: "Not enough money", message: nil, preferredStyle: .alert)
+            alertmon.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                (action: UIAlertAction!) in
+                self.alertInvest(prop: prop, playerInvest: player)
+            }))
+                    self.viewController.present(alertmon, animated: true)
+        }
     }
     
     func alertToll(prop: Property, playerPay: Player, playerReceive: Player) {
@@ -209,7 +289,8 @@ class GameScene: SKScene {
         print("**************************** Updated \(receiver.name!) 's wallet: \(receiver.walletAmount!)")
     }
     
-    
+    //MARK: - GameStart
+     /***************************************************************/
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
@@ -219,64 +300,6 @@ class GameScene: SKScene {
         initPlayer()
         initButton()
         initBgm()
-        
-        
-        /********************************************************/
-        //npc = getPlayer(playerName: "derek pao")
-        //                !!!!!!!you may uncomment the below to see how to manipulate the properties!!!!
-        //                 e.g. get the property by stationName with "purple2"
-        //let testPropNode = getProperty(stationName: "purple2")! //pass by reference
-        
-        //print out the properties related to this property
-        //testPropNode.printDebug()
-        
-        //change this node's properties
-        //testPropNode.owner = player!.name!
-        //testPropNode.setProperties(maxInvestment: 1000.0, originalPrice: 100.0)
-        //since it is passed by reference, by editing testPropNode, the original node will be changed
-        print("------------after update---------")
-        //getProperty(stationName: "purple2")?.printDebug()
-        
-        //move the playerNode into brown1
-        move(node: player!, to: "brown1")
-        let prop = getProperty(stationName: "brown1")
-        
-        ////////// Test (Uncomment or comment below code)
-        //Test Case 0: Current No prop owner -> Buy
-        
-        //Test Case 1: pepe has bought brown 1 -> Invest
-        propBuy(prop: prop!, player: player!)
-        
-        //Test Case 2: someone has bought brown 2 -> Pay Toll
-        //prop?.owner = "derek pao"
-        
-        ///////// After move, perform below if-else for buy, invest, pay toll
-        
-        if prop?.owner == "" {
-            alertBuy(prop: prop!, playerBuy: player!)
-        }
-            
-        else if prop?.owner == player?.name! {
-            // Below alert supposed to be alert with textfield or picker. But no time to examine how to do it currently
-            // therefore just use multiple choice for testing investment first
-            alertInvest(prop: prop!, playerInvest: player!)
-        }
-            
-        else if prop?.owner != player?.name! {
-            // How to generate a new player?
-            // Change below second player to another one. dont know how to make new player
-            // E.g. player 2 = derek pao -> receiver = derek pao player, which is the owner of that prop
-            alertToll(prop: prop!, playerPay: player!, playerReceive: player!)
-        }
-        //player?.walletAmount! += 1000000.0
-        print("------------Updated Player---------")
-        //getPlayer(playerName: "Pepe")?.printDebug()
-        //this function helps transvere all properties
-        tranverseProperties()
-        
-        
-        
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -393,7 +416,28 @@ extension GameScene {
     ///this function helps to update the player position according to the
     func updatePlayerPosition(player: Player){
         if player.remainSteps == 0 {
-            
+            if let prop = getProperty(stationName: player.currentStation!){
+                if prop.owner == "" {
+                    alertBuy(prop: prop, playerBuy: player)
+                }
+                else if prop.owner == player.name! {
+                    // Below alert supposed to be alert with textfield or picker. But no time to examine how to do it currently
+                    // therefore just use multiple choice for testing investment first
+                    alertInvest(prop: prop, playerInvest: player)
+                }
+                
+                else if prop.owner != player.name! {
+                    // How to generate a new player?
+                    // Change below second player to another one. dont know how to make new player
+                    // E.g. player 2 = derek pao -> receiver = derek pao player, which is the owner of that prop
+                    alertToll(prop: prop, playerPay: player, playerReceive: player)
+                }
+            }
+            //IC station for Q&A
+            else if (player.currentStation?.contains("IC"))!{
+                //code for interchange station
+                print("This is an Interchange Station")
+            }
         }
         
         if player.remainSteps > 0 {
