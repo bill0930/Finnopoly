@@ -54,7 +54,7 @@
 		36828D76C1ED1AE1837D79B8D56388F7 /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Sources/SwiftGraph/Edge.swift; sourceTree = "<group>"; };
 		413C5B64C693DE57DAF12C58C79102C8 /* Pods-Finnopoly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Finnopoly.release.xcconfig"; sourceTree = "<group>"; };
 		44816A0C6395715351F5A896D4AE749B /* Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sort.swift; path = Sources/SwiftGraph/Sort.swift; sourceTree = "<group>"; };
-		464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftGraph.framework; path = SwiftGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		464506E94A8128D21656ABD2C1A9E02C /* SwiftGraph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		518576418D99D0498B1749520E214549 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = Sources/SwiftGraph/Stack.swift; sourceTree = "<group>"; };
 		618190526503F2FDB862E992472504C2 /* Pods-Finnopoly-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Finnopoly-acknowledgements.plist"; sourceTree = "<group>"; };
 		7594A54D75CA1FDEBDF4A512C3532067 /* Constructors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constructors.swift; path = Sources/SwiftGraph/Constructors.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		8B9D7AFDCA74A5E236EEB71836CE7C6B /* UnweightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnweightedEdge.swift; path = Sources/SwiftGraph/UnweightedEdge.swift; sourceTree = "<group>"; };
 		8D96DF1AA5CE8E6700C4C477B5112FA7 /* UniqueElementsGraph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UniqueElementsGraph.swift; path = Sources/SwiftGraph/UniqueElementsGraph.swift; sourceTree = "<group>"; };
 		948A2E4F8D2E7DC27C0E360E887CDE1D /* SwiftGraph-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftGraph-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B5FF03801FD82264EFC0B899F016EB2C /* Pods-Finnopoly-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Finnopoly-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B74459EE93A826E7FB0320475AC85A06 /* Pods-Finnopoly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Finnopoly.debug.xcconfig"; sourceTree = "<group>"; };
 		B7FAACFA7265EF3EDD586C455E9E6DFD /* SwiftGraph-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-umbrella.h"; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		CA83253D73AEE02222829964D440F777 /* SwiftGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGraph-prefix.pch"; sourceTree = "<group>"; };
 		D847B99837666AAAEC299D3556CFFBD0 /* WeightedEdge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeightedEdge.swift; path = Sources/SwiftGraph/WeightedEdge.swift; sourceTree = "<group>"; };
 		D863D838C6E78EBCDB2D4CCB01575CDE /* SwiftPriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftPriorityQueue.swift; path = Sources/SwiftGraph/SwiftPriorityQueue.swift; sourceTree = "<group>"; };
-		DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Finnopoly.framework; path = "Pods-Finnopoly.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3C4E9D97BAAA19548FD7D6264ACEED /* Pods_Finnopoly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finnopoly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E283A9C230C322F60911A0EDD31AC238 /* Graph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = Sources/SwiftGraph/Graph.swift; sourceTree = "<group>"; };
 		FB4F13CF9F84458AC722AE5E78084C14 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = Sources/SwiftGraph/Queue.swift; sourceTree = "<group>"; };
 		FCF46F49D7EA155EC931596B231FF5F9 /* Pods-Finnopoly-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Finnopoly-frameworks.sh"; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 				C2B9A03A6AAE7DC0B1AB15C4CFF72052 /* WeightedGraph.swift */,
 				73F5FD1A1B61B36F05C79E308DF5347A /* Support Files */,
 			);
-			name = SwiftGraph;
 			path = SwiftGraph;
 			sourceTree = "<group>";
 		};

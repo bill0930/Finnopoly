@@ -507,7 +507,7 @@ extension GameScene {
         rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
         
         // let the button be related to the camera view
-        let bottomLeftView = CGPoint(x: 50, y: view!.frame.height + 300)
+        let bottomLeftView = CGPoint(x: 220, y: view!.frame.height + 200)
         rollDiceBtnSprite.position = convertPoint(fromView: bottomLeftView)
         rollDiceBtnSprite.zPosition = 1000
         camera.addChild(rollDiceBtnSprite)
@@ -531,7 +531,7 @@ extension GameScene {
         quitBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
         
         // let the button be related to the camera view
-        let upLeftView = CGPoint(x: 0, y: view!.frame.height - 300)
+        let upLeftView = CGPoint(x: 200, y: view!.frame.height - 250)
         quitBtnSprite.position = convertPoint(fromView: upLeftView)
         quitBtnSprite.zPosition = 1000
         camera.addChild(quitBtnSprite)
@@ -588,6 +588,13 @@ extension GameScene {
         quitForegroundSprite.setReleased()
         quitMask.setReleased()
         print("Quit Button Pressed \n#####################")
+                if let view = view
+                {
+                    let transition:SKTransition = SKTransition.fade(withDuration: 1)
+                    let scene:SKScene = GameScene(fileNamed: "MainMenu")!
+        //            scene.viewController = self
+                    self.view?.presentScene(scene, transition: transition)
+                }
     }
     
 }

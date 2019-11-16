@@ -1,16 +1,17 @@
 //
-//  Quit.swift
+//  Play.swift
 //  Finnopoly
 //
-//  Created by Jacklin Chan on 11/11/2019.
+//  Created by Oscar Chan on 14/11/2019.
 //  Copyright © 2019 Finnopoly. All rights reserved.
 //
-import Foundation
+
+import UIKit
 import SpriteKit
 
-class Quit: SKSpriteNode
+class Play: SKSpriteNode
 {
-    private let quitButton = SKSpriteNode(imageNamed: "QuitButton")
+    private let playButton = SKSpriteNode(imageNamed: "PlayButton")
     
     init(size: CGSize, frame: CGRect)
     {
@@ -27,23 +28,21 @@ class Quit: SKSpriteNode
     
     func setup(size: CGSize)
     {
-        quitButton.zPosition = 300
-        quitButton.setScale(0.75)
+        playButton.zPosition = 300
+        playButton.setScale(1)
 
-        addChild(quitButton)
+        addChild(playButton)
     }
 
     
     func setPressed()
     {
         let action = SKAction.scale(to: 0.5, duration: 0.1)
-        quitButton.run(action)
+        playButton.run(action)
     }
     
     func setReleased()
     {
-        quitButton.run(SKAction.scale(to: 0.9, duration: 0.15))
-        
-        // return main menu scene
+        playButton.run(SKAction.scale(to: 0.9, duration: 0.15))
     }
 }
