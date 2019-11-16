@@ -90,7 +90,6 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
     
     //MARK: - global variable declaration
      /***************************************************************/
-    var viewController: UIViewController!
     let serialQueue: DispatchQueue = DispatchQueue(label: "serialQueue")
     
     //    var diceNum: Int?
@@ -176,6 +175,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
     
     //prompt a alert if there is two or more paths
     func alertNextMove(stations: [Station]){
+        
         let alertController = UIAlertController(title: "Please select your next move", message: "You have \(player!.remainSteps) steps left", preferredStyle: .alert)
         
         
@@ -188,9 +188,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
                 }
             }))
         }
-        
-        self.viewController.present(alertController, animated: true, completion: nil)
-        
+        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
     }
     
     func alertBuy(prop: Property, playerBuy: Player) {
@@ -208,7 +206,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
             (action: UIAlertAction!) in
             print("No Buy Property \(prop.name!)")
         }))
-        self.viewController.present(alertController, animated: true, completion: nil)
+        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
     }
     
     func propBuy(prop: Property, player: Player) {
@@ -234,7 +232,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
         editRadiusAlert.setValue(vc, forKey: "contentViewController")
         editRadiusAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(action: UIAlertAction!) in self.test(prop: prop, playerInvest: playerInvest)}))
         editRadiusAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        self.viewController.present(editRadiusAlert, animated: true)
+        UIApplication.topViewController()?.present(editRadiusAlert, animated: true)
     }
     
     func propInvest(prop: Property, player: Player, amount: Double) {
@@ -255,7 +253,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
                 (action: UIAlertAction!) in
                 self.alertInvest(prop: prop, playerInvest: player)
             }))
-                    self.viewController.present(alertmax, animated: true)
+                    UIApplication.topViewController()?.present(alertmax, animated: true)
         }else if player.walletAmount! < amount{
         //    print("nomoney")
             let alertmon = UIAlertController(title: "Not enough money", message: nil, preferredStyle: .alert)
@@ -263,7 +261,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
                 (action: UIAlertAction!) in
                 self.alertInvest(prop: prop, playerInvest: player)
             }))
-                    self.viewController.present(alertmon, animated: true)
+                    UIApplication.topViewController()?.present(alertmon, animated: true)
         }
     }
     
@@ -277,7 +275,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
             
         }))
         
-        self.viewController.present(alertController, animated: true, completion: nil)
+        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
     }
     
     func propPayToll(prop: Property, payer: Player, receiver: Player) {
@@ -288,7 +286,6 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
         receiver.walletAmount! += prop.tollPrice
         print("**************************** Updated \(receiver.name!) 's wallet: \(receiver.walletAmount!)")
     }
-    
     //MARK: - GameStart
      /***************************************************************/
     override func didMove(to view: SKView) {
@@ -300,6 +297,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
         initPlayer()
         initButton()
         initBgm()
+       
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -450,7 +448,6 @@ extension GameScene {
                 }
             } else if adjStation.count > 1 {
                 alertNextMove(stations: adjStation)
-                
             }
         }
         
@@ -507,7 +504,8 @@ extension GameScene {
         rollDiceBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
         
         // let the button be related to the camera view
-        let bottomLeftView = CGPoint(x: 220, y: view!.frame.height + 200)
+        print(view?.frame.dictionaryRepresentation)
+        let bottomLeftView = CGPoint(x: (view?.frame.height)! * 0.2, y: (view?.frame.width)! )
         rollDiceBtnSprite.position = convertPoint(fromView: bottomLeftView)
         rollDiceBtnSprite.zPosition = 1000
         camera.addChild(rollDiceBtnSprite)
@@ -531,7 +529,7 @@ extension GameScene {
         quitBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
         
         // let the button be related to the camera view
-        let upLeftView = CGPoint(x: 200, y: view!.frame.height - 250)
+        let upLeftView = CGPoint(x: (view?.frame.height)! * 0.05, y: (view?.frame.width)! * 0.1)
         quitBtnSprite.position = convertPoint(fromView: upLeftView)
         quitBtnSprite.zPosition = 1000
         camera.addChild(quitBtnSprite)
@@ -588,7 +586,7 @@ extension GameScene {
         quitForegroundSprite.setReleased()
         quitMask.setReleased()
         print("Quit Button Pressed \n#####################")
-                if let view = view
+        if view != nil
                 {
                     let transition:SKTransition = SKTransition.fade(withDuration: 1)
                     let scene:SKScene = GameScene(fileNamed: "MainMenu")!

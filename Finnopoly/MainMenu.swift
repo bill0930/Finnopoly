@@ -14,6 +14,7 @@ class MainMenu: SKScene {
     var playForegroundSprite : Play!
     var playMask : Play!
     
+    
     override func didMove(to view: SKView)
     {
         let cropNode = SKCropNode()
@@ -79,11 +80,12 @@ class MainMenu: SKScene {
         playForegroundSprite.setReleased()
         playMask.setReleased()
         print("Play Button Pressed \n#####################")
-        if let view = view
+        if view != nil
         {
             let transition:SKTransition = SKTransition.fade(withDuration: 1)
-            let scene:SKScene = GameScene(fileNamed: "GameScene")!
-//            scene.viewController = self
+            let scene:SKScene = GameScene(fileNamed: "GameScene")!           
+            scene.scaleMode = .aspectFill
+            view?.showsPhysics = true
             self.view?.presentScene(scene, transition: transition)
         }
     }
