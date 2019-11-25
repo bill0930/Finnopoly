@@ -109,6 +109,10 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
     var quitForegroundSprite : Quit!
     var quitMask : Quit!
     
+    var displayBtnSprite : SKAControlSprite!
+    var displayForegroundSprite : Display!
+    var displayMask : Display!
+    
     //test player
     var npc: Player?
     
@@ -149,8 +153,6 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
     }
     
     func initButton(){
-        /********************************************************/
-        // Button Display
         let cropNode = SKCropNode()
         cropNode.zPosition = 100
         cropNode.position = CGPoint(x: 0, y: 0)
@@ -163,7 +165,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
         
         setupRollDiceButton(maskNode: maskNode, camera: pepeCam)
         setupQuitButton(maskNode: maskNode, camera: pepeCam)
-        /********************************************************/
+        setupDisplayButton(maskNode: maskNode, camera: pepeCam)
     }
     
     func initBgm (){
@@ -548,6 +550,30 @@ extension GameScene {
         camera.addChild(quitForegroundSprite)
     }
     
+    func setupDisplayButton(maskNode: SKNode, camera: SKNode)
+    {
+        displayBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
+        
+        // let the button be related to the camera view
+        let upRightView = CGPoint(x: (view?.frame.height)! * 3.05, y: (view?.frame.width)! * 0.1)
+        displayBtnSprite.position = convertPoint(fromView: upRightView)
+        displayBtnSprite.zPosition = 1000
+        camera.addChild(displayBtnSprite)
+        
+        // set the action for certain events
+        displayBtnSprite.addTarget(self, selector: #selector(displayButtonTouchDown), forControlEvents: [.TouchDown, .DragEnter])
+        displayBtnSprite.addTarget(self, selector: #selector(displayButtonTouchUpInside), forControlEvents: [.TouchUpInside])
+        
+        displayMask = Display(size: displayBtnSprite.size, frame: frame)
+        displayMask.position = displayBtnSprite.position
+        
+        displayForegroundSprite = Display(size: displayBtnSprite.size, frame: frame)
+        displayForegroundSprite.position = displayBtnSprite.position
+        
+        maskNode.addChild(displayMask)
+        camera.addChild(displayForegroundSprite)
+    }
+    
     @objc func rollDiceButtonTouchDown()
     {
         if toRoll
@@ -590,10 +616,26 @@ extension GameScene {
                 {
                     let transition:SKTransition = SKTransition.fade(withDuration: 1)
                     let scene:SKScene = GameScene(fileNamed: "MainMenu")!
-        //            scene.viewController = self
                     self.view?.presentScene(scene, transition: transition)
                 }
     }
     
+    @objc func displayButtonTouchDown()
+    {
+        displayForegroundSprite.setPressed()
+        displayMask.setPressed()
+    }
+    
+    @objc func displayButtonTouchUpInside()
+    {
+        displayForegroundSprite.setReleased()
+        displayMask.setReleased()
+        print("Display Button Pressed \n#####################")
+        
+        let propCount = player?.holdingProps.count
+        let displayInfo = UIAlertController(title: "Player: Pepe" ,message: "Wallet: $\(player!.walletAmount!)\nNumber of Owned Properties: \(propCount!)", preferredStyle: UIAlertController.Style.alert)
+        displayInfo.addAction(UIAlertAction(title: "Return", style: .cancel, handler: nil))
+        UIApplication.topViewController()?.present(displayInfo, animated: true)
+    }
 }
 

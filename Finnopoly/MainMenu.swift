@@ -49,9 +49,7 @@ class MainMenu: SKScene {
     {
         playBtnSprite = SKAControlSprite(color: .clear, size: CGSize(width: 50, height: 50))
         
-//        let upLeftView = CGPoint(x: 0, y: 0)
-//        playBtnSprite.position = convertPoint(fromView: upLeftView)
-        playBtnSprite.position = CGPoint(x: 0, y: 0)
+        playBtnSprite.position = CGPoint(x: -200, y: -100)
         playBtnSprite.zPosition = 1000
         self.addChild(playBtnSprite)
         

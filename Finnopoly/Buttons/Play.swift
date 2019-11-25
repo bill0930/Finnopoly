@@ -2,7 +2,7 @@
 //  Play.swift
 //  Finnopoly
 //
-//  Created by Oscar Chan on 14/11/2019.
+//  Created by Jacklin Chan on 14/11/2019.
 //  Copyright © 2019 Finnopoly. All rights reserved.
 //
 
@@ -29,7 +29,7 @@ class Play: SKSpriteNode
     func setup(size: CGSize)
     {
         playButton.zPosition = 300
-        playButton.setScale(1)
+        playButton.setScale(0.7)
 
         addChild(playButton)
     }
@@ -43,6 +43,6 @@ class Play: SKSpriteNode
     
     func setReleased()
     {
-        playButton.run(SKAction.scale(to: 0.9, duration: 0.15))
+        playButton.run(SKAction.scale(to: 0.7, duration: 0.15))
     }
 }

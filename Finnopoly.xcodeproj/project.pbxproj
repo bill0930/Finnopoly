@@ -24,11 +24,11 @@
 		28C404E6236FF89A00A36FB0 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C404E5236FF89A00A36FB0 /* Property.swift */; };
 		76678768C9BD16BE3C82860A /* Pods_Finnopoly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DB1C8150FF2D65363B163 /* Pods_Finnopoly.framework */; };
 		9D0B8CF8237C6E380011BDF8 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B8CF7237C6E380011BDF8 /* Play.swift */; };
+		C49D1A31238AD9CA001A3F69 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D1A30238AD9CA001A3F69 /* Display.swift */; };
 		C4DD88F72378986A0004EF9A /* images.atlas in Resources */ = {isa = PBXBuildFile; fileRef = C4DD88F62378986A0004EF9A /* images.atlas */; };
 		C4DD88F92379269E0004EF9A /* Quit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD88F82379269E0004EF9A /* Quit.swift */; };
 		C4DD88FD237930AB0004EF9A /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD88FC237930AB0004EF9A /* MainMenu.swift */; };
 		C4DD88FF237931010004EF9A /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = C4DD88FE237931010004EF9A /* MainMenu.sks */; };
-		C4DD8901237952050004EF9A /* Sucker.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4DD8900237952050004EF9A /* Sucker.mp3 */; };
 		C4DD8903237956480004EF9A /* GameSceneBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4DD8902237956470004EF9A /* GameSceneBGM.mp3 */; };
 		C4E28622237493D600932B87 /* RollDice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28621237493D600932B87 /* RollDice.swift */; };
 		C4E286242374940700932B87 /* SKControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E286232374940700932B87 /* SKControl.swift */; };
@@ -56,11 +56,11 @@
 		3306CEA516BE3ABC31305C08 /* Pods-Finnopoly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.release.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.release.xcconfig"; sourceTree = "<group>"; };
 		92C6AAD05310C1C2399BBBAE /* Pods-Finnopoly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.debug.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.debug.xcconfig"; sourceTree = "<group>"; };
 		9D0B8CF7237C6E380011BDF8 /* Play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
+		C49D1A30238AD9CA001A3F69 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		C4DD88F62378986A0004EF9A /* images.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = images.atlas; sourceTree = "<group>"; };
 		C4DD88F82379269E0004EF9A /* Quit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quit.swift; sourceTree = "<group>"; };
 		C4DD88FC237930AB0004EF9A /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		C4DD88FE237931010004EF9A /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
-		C4DD8900237952050004EF9A /* Sucker.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sucker.mp3; sourceTree = "<group>"; };
 		C4DD8902237956470004EF9A /* GameSceneBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameSceneBGM.mp3; sourceTree = "<group>"; };
 		C4E28621237493D600932B87 /* RollDice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollDice.swift; sourceTree = "<group>"; };
 		C4E286232374940700932B87 /* SKControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKControl.swift; sourceTree = "<group>"; };
@@ -115,7 +115,6 @@
 				288EA9AE235F0B050099C6BD /* Main.storyboard */,
 				288EA9B1235F0B070099C6BD /* Assets.xcassets */,
 				C4DD8902237956470004EF9A /* GameSceneBGM.mp3 */,
-				C4DD8900237952050004EF9A /* Sucker.mp3 */,
 				288EA9B3235F0B070099C6BD /* LaunchScreen.storyboard */,
 				288EA9B6235F0B070099C6BD /* Info.plist */,
 			);
@@ -173,6 +172,7 @@
 				C4E28621237493D600932B87 /* RollDice.swift */,
 				C4DD88F82379269E0004EF9A /* Quit.swift */,
 				9D0B8CF7237C6E380011BDF8 /* Play.swift */,
+				C49D1A30238AD9CA001A3F69 /* Display.swift */,
 			);
 			name = Buttons;
 			path = Finnopoly/Buttons;
@@ -243,7 +243,6 @@
 				C4DD8903237956480004EF9A /* GameSceneBGM.mp3 in Resources */,
 				C4DD88F72378986A0004EF9A /* images.atlas in Resources */,
 				288EA9B0235F0B050099C6BD /* Main.storyboard in Resources */,
-				C4DD8901237952050004EF9A /* Sucker.mp3 in Resources */,
 				288EA9B2235F0B070099C6BD /* Assets.xcassets in Resources */,
 				C4DD88FF237931010004EF9A /* MainMenu.sks in Resources */,
 				288EA9D523618FB50099C6BD /* .gitignore in Resources */,
@@ -310,6 +309,7 @@
 				288EA9D1235FA53A0099C6BD /* SKNode+extension.swift in Sources */,
 				288EA9CA235F88A00099C6BD /* Player.swift in Sources */,
 				C4DD88F92379269E0004EF9A /* Quit.swift in Sources */,
+				C49D1A31238AD9CA001A3F69 /* Display.swift in Sources */,
 				288EA9C4235F7A2D0099C6BD /* Functions.swift in Sources */,
 				9D0B8CF8237C6E380011BDF8 /* Play.swift in Sources */,
 				C4E28622237493D600932B87 /* RollDice.swift in Sources */,

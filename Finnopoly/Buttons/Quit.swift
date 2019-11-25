@@ -28,7 +28,7 @@ class Quit: SKSpriteNode
     func setup(size: CGSize)
     {
         quitButton.zPosition = 300
-        quitButton.setScale(0.75)
+        quitButton.setScale(0.65)
 
         addChild(quitButton)
     }
@@ -42,8 +42,6 @@ class Quit: SKSpriteNode
     
     func setReleased()
     {
-        quitButton.run(SKAction.scale(to: 0.9, duration: 0.15))
-        
-        // return main menu scene
+        quitButton.run(SKAction.scale(to: 0.65, duration: 0.15))
     }
 }
