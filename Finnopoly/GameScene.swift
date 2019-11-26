@@ -217,7 +217,10 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
         prop.setPropLevel() // Change Display image -> from house_0 to house_x
         print("*** System: Buy Complete *** \(player.name!) buys \(prop.name!)")
         print("**************************** Updated \(player.name!) 's wallet: \(player.walletAmount!)")
-        
+        //add the bought property into the player.holdingProps
+        if !player.holdingProps.contains(prop.name!){
+            player.holdingProps.append(prop.name!)
+        }
         prop.printDebug()
     }
     
