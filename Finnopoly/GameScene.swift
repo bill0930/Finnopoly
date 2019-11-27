@@ -459,6 +459,8 @@ extension GameScene {
                 print("This is an Interchange Station")
                 initQuestions()
             }
+            //enable the dieRolling button
+            toRoll = true
         }
         
         if player.remainSteps > 0 {
@@ -608,6 +610,9 @@ extension GameScene {
     {
         if toRoll
         {
+            //disable the dieRolling button
+            toRoll = false
+            
             myMoves = rollDiceForegroundSprite.rollDice()
             print("Dice Result: \(myMoves) \n#################")
             player?.remainSteps = myMoves
