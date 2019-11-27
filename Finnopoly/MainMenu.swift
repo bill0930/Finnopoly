@@ -77,7 +77,7 @@ class MainMenu: SKScene {
     {
         playForegroundSprite.setReleased()
         playMask.setReleased()
-        print("Play Button Pressed \n#####################")
+        print("Play Button Pressed \n######################")
         if view != nil
         {
             let transition:SKTransition = SKTransition.fade(withDuration: 1)

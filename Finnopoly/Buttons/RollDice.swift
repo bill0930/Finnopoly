@@ -54,6 +54,7 @@ class RollDice : SKSpriteNode
     {
         let die1_result = Int.random(in: 1...6)
         let die2_result = Int.random(in: 1...6)
+        
         mySteps = die1_result + die2_result
         
         // debug use
