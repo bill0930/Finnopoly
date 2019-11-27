@@ -169,10 +169,30 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
     }
     
     func initBgm (){
-        // Background Music
         let bgm = SKAudioNode(fileNamed: "GameSceneBGM.mp3")
         self.addChild(bgm)
         bgm.run(SKAction.play())
+    }
+    
+    func initQuestions(){
+        let questionBank = QuestionBank()
+        let questionAndAnswers = questionBank.RandomQuestions()
+        
+        let alert = UIAlertController(title: questionAndAnswers.0, message: "\(questionAndAnswers.1)\n\(questionAndAnswers.3)\n\(questionAndAnswers.5)\n\(questionAndAnswers.7)", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "A", style: .default, handler:  {
+            action in self.questionRewards(result: questionAndAnswers.2, currentPlayer: self.player!)
+        }))
+        alert.addAction(UIAlertAction(title: "B", style: .default, handler:  {
+            action in self.questionRewards(result: questionAndAnswers.4, currentPlayer: self.player!)
+        }))
+        alert.addAction(UIAlertAction(title: "C", style: .default, handler:  {
+            action in self.questionRewards(result: questionAndAnswers.6, currentPlayer: self.player!)
+        }))
+        alert.addAction(UIAlertAction(title: "D", style: .default, handler:  {
+            action in self.questionRewards(result: questionAndAnswers.8, currentPlayer: self.player!)
+        }))
+        
+        UIApplication.topViewController()?.present(alert, animated: true, completion: nil)
     }
     
     //prompt a alert if there is two or more paths
@@ -217,10 +237,7 @@ class GameScene: SKScene, UIPickerViewDataSource,UIPickerViewDelegate {
         prop.setPropLevel() // Change Display image -> from house_0 to house_x
         print("*** System: Buy Complete *** \(player.name!) buys \(prop.name!)")
         print("**************************** Updated \(player.name!) 's wallet: \(player.walletAmount!)")
-        //add the bought property into the player.holdingProps
-        if !player.holdingProps.contains(prop.name!){
-            player.holdingProps.append(prop.name!)
-        }
+        
         prop.printDebug()
     }
     
@@ -440,6 +457,7 @@ extension GameScene {
             else if (player.currentStation?.contains("IC"))!{
                 //code for interchange station
                 print("This is an Interchange Station")
+                initQuestions()
             }
         }
         
@@ -576,7 +594,7 @@ extension GameScene {
         maskNode.addChild(displayMask)
         camera.addChild(displayForegroundSprite)
     }
-    
+
     @objc func rollDiceButtonTouchDown()
     {
         if toRoll
@@ -635,10 +653,26 @@ extension GameScene {
         displayMask.setReleased()
         print("Display Button Pressed \n#####################")
         
-        let propCount = player?.holdingProps.count
-        let displayInfo = UIAlertController(title: "Player: Pepe" ,message: "Wallet: $\(player!.walletAmount!)\nNumber of Owned Properties: \(propCount!)", preferredStyle: UIAlertController.Style.alert)
+        let displayInfo = UIAlertController(title: "Player: Pepe" ,message: "Wallet: $\(player!.walletAmount!)\nNumber of Owned Properties: \(player!.getPropsCount())", preferredStyle: UIAlertController.Style.alert)
         displayInfo.addAction(UIAlertAction(title: "Return", style: .cancel, handler: nil))
         UIApplication.topViewController()?.present(displayInfo, animated: true)
+    }
+    
+    func questionRewards(result : String, currentPlayer : Player){
+        if result == "false"
+        {
+            let resultAlert = UIAlertController(title: "Oops", message: "Try again next time", preferredStyle:UIAlertController.Style.alert)
+            resultAlert.addAction(UIAlertAction(title: "OK, got it", style: .cancel, handler: nil))
+            UIApplication.topViewController()?.present(resultAlert, animated: true, completion: nil)
+        }
+        else if result == "correct"
+        {
+            currentPlayer.walletAmount! += 200
+            let resultAlert = UIAlertController(title: "Hurray!!", message: "$200 is given to you", preferredStyle:UIAlertController.Style.alert)
+            resultAlert.addAction(UIAlertAction(title: "Sounds great!", style: .cancel, handler: nil))
+            UIApplication.topViewController()?.present(resultAlert, animated: true, completion: nil)
+        }
+        print("$", currentPlayer.walletAmount!)
     }
 }
 
