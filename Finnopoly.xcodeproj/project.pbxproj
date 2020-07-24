@@ -23,7 +23,6 @@
 		288EA9D523618FB50099C6BD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 288EA9D423618FB50099C6BD /* .gitignore */; };
 		28C404E6236FF89A00A36FB0 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C404E5236FF89A00A36FB0 /* Property.swift */; };
 		32D3527624CA99DF0065C107 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D3527524CA99DF0065C107 /* QuestionBank.swift */; };
-		32D3527824CA99E40065C107 /* RollDice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D3527724CA99E40065C107 /* RollDice.swift */; };
 		76678768C9BD16BE3C82860A /* Pods_Finnopoly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DB1C8150FF2D65363B163 /* Pods_Finnopoly.framework */; };
 		9D0B8CF8237C6E380011BDF8 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B8CF7237C6E380011BDF8 /* Play.swift */; };
 		C49D1A31238AD9CA001A3F69 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D1A30238AD9CA001A3F69 /* Display.swift */; };
@@ -56,7 +55,6 @@
 		288EA9D423618FB50099C6BD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		28C404E5236FF89A00A36FB0 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		32D3527524CA99DF0065C107 /* QuestionBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
-		32D3527724CA99E40065C107 /* RollDice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollDice.swift; sourceTree = "<group>"; };
 		3306CEA516BE3ABC31305C08 /* Pods-Finnopoly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.release.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.release.xcconfig"; sourceTree = "<group>"; };
 		92C6AAD05310C1C2399BBBAE /* Pods-Finnopoly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finnopoly.debug.xcconfig"; path = "Target Support Files/Pods-Finnopoly/Pods-Finnopoly.debug.xcconfig"; sourceTree = "<group>"; };
 		9D0B8CF7237C6E380011BDF8 /* Play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 			children = (
 				288EA9C5235F85B90099C6BD /* Station.swift */,
 				32D3527524CA99DF0065C107 /* QuestionBank.swift */,
-				32D3527724CA99E40065C107 /* RollDice.swift */,
 				288EA9C9235F88A00099C6BD /* Player.swift */,
 				28C404E5236FF89A00A36FB0 /* Property.swift */,
 			);
@@ -316,7 +313,6 @@
 				288EA9D1235FA53A0099C6BD /* SKNode+extension.swift in Sources */,
 				288EA9CA235F88A00099C6BD /* Player.swift in Sources */,
 				C4DD88F92379269E0004EF9A /* Quit.swift in Sources */,
-				32D3527824CA99E40065C107 /* RollDice.swift in Sources */,
 				C49D1A31238AD9CA001A3F69 /* Display.swift in Sources */,
 				288EA9C4235F7A2D0099C6BD /* Functions.swift in Sources */,
 				9D0B8CF8237C6E380011BDF8 /* Play.swift in Sources */,
